@@ -1,5 +1,14 @@
 // Smooth scroll to different target sections
- 
+//store the a href in an array to add a smooth scrolling effect
+
+document.querySelectorAll('a[href=^"#"]').forEach (anchor => {
+    anchor.addEventListener ('click', function (e) {
+        e.preventDefault(); 
+        document.querySelector(this.getAttribute(href)).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
 
 //Home-page buttons
 
@@ -13,6 +22,8 @@ hire.addEventListener('click', function () {
 download.addEventListener('click', function() {
     window.location.href = "https://www.linkedin.com/feed/"; 
 }); 
+
+
 
 
 

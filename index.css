@@ -120,6 +120,7 @@ main {
     flex-direction: column;
     margin-top: -200px;
     margin-left: 1200px;
+    position: fixed;
 }
 
 .linkedin-link {
@@ -212,3 +213,32 @@ main {
 .container2 {
     display: flex;
 }
+
+.text {
+    padding: 20px;
+    margin: 20px;
+    text-align: justify;
+    max-width: 650px;
+}
+
+.text h2 {
+    padding-bottom: 20px;
+}
+
+.basic-info {
+    padding: 20px;
+    margin: 20px;
+    text-align: justify;
+}
+
+.basic-info h2 {
+    padding-bottom: 20px;
+}
+
+.basic-info li {
+    list-style: none;
+}
+
+
+
+

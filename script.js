@@ -1,4 +1,8 @@
-/* Home-page buttons */
+// Smooth scroll to different target sections
+ 
+
+//Home-page buttons
+
 const hire = document.getElementById("hire-me")
 const download = document.getElementById("downloadCV")
 

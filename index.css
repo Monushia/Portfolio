@@ -1,21 +1,25 @@
-body {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Nav-bar styling */
-
-.background-image {
-    background-image: url(background.jpg);
-    position: absolute;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 120%;
-    z-index: -1; 
-    transform: translate3d(0px, 0px, 0px);
+main {
+    width: 1280px;
+    margin: auto;
 }
+
+#portfolio, #about, #skills, #projects, #contact {
+    width: 100%;
+    height: 720px;
+    border: 1px solid black;
+}
+
+/* Nav-bar styling */
 
 .nav-bar {
     background-color: rgb(2, 153, 2);
@@ -23,13 +27,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-}
-
-.nav-bar {
     list-style: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
+    min-height: 30px;
 }
 
 .nav-bar li {
@@ -52,19 +52,36 @@ body {
 
 /* Body styling */
 
+.background-image {
+    background-image: url(background.jpg);
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 120%;
+    z-index: -1; 
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.primary {
+    display: flex;
+}
+
 .profile-pic img{
     width: 300px;
     height: auto;
     border: none;
-    margin: 100px;
+    margin: 150px;
     padding: 20px;
     border-radius: 100px;
 }
 
 .title {
     font-weight: bold;
-    text-align: center;
     color: rgb(6, 166, 6);
+    margin: 200px;
+    text-align: center;
+    font-size: 20px;
 } 
 
 /* Buttons styling */
@@ -73,13 +90,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    border: 0;
+    padding: 0;
 }
 
 .styled-button1 {
     background-color:rgb(6, 166, 6);
-    border: none;
-    color: white;
     border-radius: 20px;
     padding: 10px 20px;
     margin: 20px;
@@ -89,23 +105,12 @@ body {
 
 .styled-button2 {
     background-color: rgb(6, 166, 6);
-    border: none;
-    color: white;
     border-radius: 20px;
     padding: 10px 20px;
     margin: 20px;
     transition: background-color 0.3s ease-in-out;
     text-align: center;
 }
-
-.styled-button1:hover {
-    background-color: 45a049;
-}
-
-.styled-button2:hover {
-    background-color: 45a049;
-}
-
 
 .linkedin-link {
     display: inline-block;
@@ -191,3 +196,9 @@ body {
     background-color: #ddd;
 }
 
+
+/* About-Page */
+
+.container2 {
+    display: flex;
+}

@@ -21,11 +21,11 @@ hire.addEventListener('click', function () {
 
 download.addEventListener('click', function() {
     window.location.href = "https://www.linkedin.com/feed/"; 
-}); 
+});   
 
 
 
-//About-page
+//About-page 
 
 
 

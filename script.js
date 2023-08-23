@@ -25,7 +25,22 @@ download.addEventListener('click', function() {
 
 
 
+//About-page
 
+
+
+
+//Skills-page
+
+
+
+
+//Projects-page
+
+
+
+
+//Contact-page 
 
 
 

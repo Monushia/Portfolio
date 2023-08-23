@@ -242,6 +242,8 @@ main {
     list-style: none;
 }
 
+/* Skills-Page */
+
 .skill-images {
     display: inline-flex;
     max-width: 100%;
@@ -249,10 +251,124 @@ main {
     position: absolute;
 }
 
-.image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8 {
-    display: inline-flex;
-    width: 100%;
+.image1 {
+    position: relative;
+    display: inline-block;
 }
+
+.image1 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 153, 2);
+    padding: 10px;
+}
+
+.image2 {
+    position: relative;
+    display: inline-block;
+}
+
+.image2 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 153, 2);
+    padding: 10px;
+}
+
+.image3 {
+    position: relative;
+    display: inline-block;
+}
+
+.image3 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 153, 2);
+    padding: 10px;
+}
+
+.image4 {
+    position: relative;
+    display: inline-block;
+}
+
+.image4 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 153, 2);
+    padding: 10px;
+}
+
+.image5 {
+    position: relative;
+    display: inline-block;
+}
+
+.image5 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 153, 2);
+    padding: 10px;
+}
+
+.image6 {
+    position: relative;
+    display: inline-block;
+}
+
+.image6 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 153, 2);
+    padding: 10px;
+}
+
+.image7 {
+    position: relative;
+    display: inline-block;
+}
+
+.image7 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 153, 2);
+    padding: 10px;
+}
+
+.image8 {
+    position: relative;
+    display: inline-block;
+}
+
+.image8 h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 153, 2);
+    padding: 10px;
+}
+
+
+
+
+
+
+
 
 
 

@@ -432,6 +432,10 @@ main {
     height: auto;
 }
 
+.form contact-form {
+    display: grid;
+}
+
 
 
 

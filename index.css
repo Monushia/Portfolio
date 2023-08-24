@@ -86,7 +86,31 @@ main {
     padding-left: 350px;
     text-align: center;
     font-size: 16px;
+    overflow: hidden;
 } 
+
+.title h2 {
+    animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+   from {
+    width: 80%;
+   }
+   to {
+    width: 100%;
+   }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #000;
+    }
+}
+
 
 /* Buttons styling */
 
@@ -106,6 +130,7 @@ main {
     margin: 20px;
     transition: background-color 0.3s ease-in-out;
     text-align: center;
+    width: 10%;
 }
 
 .styled-button2 {
@@ -115,24 +140,25 @@ main {
     margin: 20px;
     transition: background-color 0.3s ease-in-out;
     text-align: center;
+    width: 10%;
 }
 
 .links {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+    overflow: hidden; 
     margin-top: -200px;
     margin-left: 1200px;
     position: fixed;
 }
 
 .linkedin-link {
-    display: inline-block;
+    display: inline-flex;
     width: 50px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-    background-color: green;
-    text-decoration: none;
+    border-radius: 50%;
 }
 
 .linkedin-link i {
@@ -146,22 +172,21 @@ main {
 .linkedin-link img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 100%;
-}
+    border-radius: 100%; 
+} 
 
 .linkedin:hover {
     background-color: #ddd;
 } 
 
 .github-link {
-    display: inline-block;
+    display: inline-flex;
     width: 50px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-    background-color: green;
-    text-decoration: none;
-}
+    border-radius: 50%;
+} 
 
 .github-link i {
     display: flex;
@@ -182,13 +207,12 @@ main {
 }
 
 .Email-link {
-    display: inline-block;
+    display: inline-flex;
     width: 50px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-    background-color: green;
-    text-decoration: none;
+    border-radius: 50%;
 }
 
 .Email-link i {
@@ -278,7 +302,7 @@ main {
     max-width: 100%;
     height: auto;
     position: absolute;
-}
+} 
 
 .image1 img {
     position: relative;

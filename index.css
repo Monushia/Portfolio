@@ -29,6 +29,7 @@ main {
     list-style: none;
     overflow: hidden;
     min-height: 30px;
+    z-index: 1;
 }
 
 .nav-bar li {
@@ -236,7 +237,6 @@ main {
 
 /* About-Page */
 
-
 .container2 {
     display: flex;
     width: 1000px;
@@ -246,6 +246,7 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: translate(0%, 40%);
 }  
 
 .text {
@@ -292,6 +293,7 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: translate(0%, 40%);
 }  
 
 .container3 h2 {
@@ -334,6 +336,7 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: translate(0%, 40%);
 }
 
 .slide-show {
@@ -409,10 +412,11 @@ main {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     max-width: 100%;
     height: auto;
+    transform: translate(0%, 10%);
 }
 
 .form contact-form {
-    display: grid;
+    display: flex;
 }
 
 

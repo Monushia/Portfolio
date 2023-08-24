@@ -284,9 +284,7 @@ main {
 
 /* Skills-Page */
 
-
 .container3 {
-    display: flex;
     width: 1000px;
     height: 400px;
     background-color: white;
@@ -294,143 +292,36 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}  
+
+.container3 h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .skill-images {
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
-    height: auto;
-    position: absolute;
+    justify-content: space-between; 
+}
+
+.skill-images > div {
+    flex: 1 1 calc(33.33% -20px); /*Adjust width for 3 columns with margins*/
+    margin: 5px;
+    text-align: center;
+}
+
+.skill-images img {
+    max-height: 100%;
+    width: 100px; 
+    padding: 10px;
+}
+
+.skill-images h3 {
+    margin-top: 10px;
+    color: rgb(6, 166, 6);
 } 
-
-.image1 img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-}
-
-.image1 h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(2, 153, 2);
-    padding: 10px;
-}
-
-.image2 img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-}
-
-.image2 h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(2, 153, 2);
-    padding: 10px;
-}
-
-.image3 img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-}
-
-.image3 h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(2, 153, 2);
-    padding: 10px;
-}
-
-.image4 img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-}
-
-.image4 h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(2, 153, 2);
-    padding: 10px;
-}
-
-.image5 img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-}
-
-.image5 h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(2, 153, 2);
-    padding: 10px;
-}
-
-.image6 img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-}
-
-.image6 h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(2, 153, 2);
-    padding: 10px;
-}
-
-.image7 img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-}
-
-.image7 h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(2, 153, 2);
-    padding: 10px;
-}
-
-.image8 img {
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-}
-
-.image8 h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(2, 153, 2);
-    padding: 10px;
-}
 
 /* Projects-Page */
 

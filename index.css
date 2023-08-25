@@ -480,6 +480,7 @@ main {
     height: 30px;
 }
 
+
 .form button {
     background-color: rgb(6, 166, 6);
     color: white;
@@ -503,6 +504,11 @@ main {
     list-style: none;
     padding: 30px;
 }
+.icons{
+margin-right: 410px;
+transform: translate(0%, 240%);
+}   
+
 
 
 

@@ -8,7 +8,7 @@ document.querySelectorAll('a[href=^"#"]').forEach (anchor => {
             behavior: "smooth"
         });
     });
-});
+}); 
 
 //Home-page buttons
 
@@ -21,7 +21,7 @@ hire.addEventListener('click', function () {
 
 download.addEventListener('click', function() {
     window.location.href = "https://www.linkedin.com/feed/"; 
-});      
+});           
 
 
 

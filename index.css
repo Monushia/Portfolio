@@ -65,30 +65,38 @@ main {
     transform: translate3d(0px, 0px, 0px); 
 }
 
-.primary {
+
+.main1 {
     display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 50vh;
 }
 
 .profile-pic img{
     max-width: 100%;
-    width: 200px;
     height: auto;
+    width: 230px;
     border: none;
-    margin: 150px;
+    margin-top: 250px;
+    margin-right: 1000px;
     padding: 20px;
     border-radius: 100px;
 }
 
 .title {
-    font-weight: bold;
+    font-weight: bolder; 
     font-style: italic;
     color: rgb(6, 166, 6);
-    margin-top: -300px;
-    padding-left: 350px;
+    font-size: 14px;
     text-align: center;
-    font-size: 16px;
-    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 } 
+
 
 .title h2 {
     animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
@@ -119,123 +127,52 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0;
-    padding: 0;
     margin-top: 100px;
+}
+
+.styled-button1,
+.styled-button2 {
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color:  rgb(2, 153, 2);
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    width: 150px;
     cursor: pointer;
 }
 
+button:hover {
+    background-color: rgb(4, 125, 4);
+  }
 
-.styled-button1 {
-    background-color:rgb(6, 166, 6);
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin: 20px;
-    transition: background-color 0.3s ease-in-out;
-    text-align: center;
-    width: 10%;
-}
-
-.styled-button2 {
-    background-color: rgb(6, 166, 6);
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin: 20px;
-    transition: background-color 0.3s ease-in-out;
-    text-align: center;
-    width: 10%;
-}
 
 .links {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    overflow: hidden; 
-    margin-top: -200px;
-    margin-left: 1200px;
-    position: fixed;
+    align-items: flex-start;
+    margin-left: 1350px;
+    margin-top: -250px; 
 }
 
-.linkedin-link {
-    display: inline-flex;
+.links a {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.links a i img {
     width: 50px;
     height: 50px;
-    text-align: center;
-    line-height: 50px;
     border-radius: 50%;
-}
-
-.linkedin-link i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.linkedin-link img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 100%; 
+    padding: 0.5px;
+    background-color: greenyellow;
 } 
-
-.linkedin:hover {
-    background-color: #ddd;
-} 
-
-.github-link {
-    display: inline-flex;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-} 
-
-.github-link i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.github-link img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 100%;
-}
-
-.github-link:hover {
-    background-color: #ddd;
-}
-
-.Email-link {
-    display: inline-flex;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-}
-
-.Email-link i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.Email-link img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 100%;
-}
-
-.Email-link:hover {
-    background-color: #ddd;
-} 
-
 
 /* About-Page */
 

@@ -152,6 +152,7 @@ button:hover {
     background-color: rgb(4, 125, 4);
   }
 
+/* Social links styling */
 
 .links {
     display: flex;
@@ -176,176 +177,149 @@ button:hover {
 
 /* About-Page */
 
-.container2 {
+.container {
     display: flex;
-    width: 1000px;
-    height: 400px;
-    background-color: white;
-    margin: 100px auto;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
     padding: 20px;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    transform: translate(0%, 40%);
-}  
+}
 
-.text {
+.about-text, .basic-info {
+    flex: 1;
     padding: 20px;
-    margin: 20px;
-    text-align: justify;
-    max-width: 650px;
-}
-
-.text h3 {
-    padding-bottom: 30px;
-}
-
-.text p {
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    word-spacing: 6px;
-}
-
-.basic-info {
-    padding: 20px;
-    margin: 20px;
+    margin: 10px;
     text-align: justify;
 }
 
-.basic-info h3 {
-    padding-bottom: 20px;
+.about-text h2, .basic-info h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.basic-info ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 .basic-info li {
-    display: flex;
-    list-style: none;
-    font-size: 15px; 
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.basic-info li b {
+    font-weight: bold;
+}
+
+.basic-info li a {
+    color: rgb(2, 153, 2);
+    text-decoration: none;
+}
+
+.basic-info li a:hover {
+    text-decoration: underline;
 }
 
 
 /* Skills-Page */
-
-.container3 {
+.container {
     width: 1000px;
-    height: 400px;
+    height: auto;
     background-color: white;
-    margin: 100px auto;  
+    margin: 100px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transform: translate(0%, 40%);
-}  
+}
 
-.container3 h2 {
+.container h2 {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .skill-images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-.skill-images > div {
-    flex: 1 1 calc(33.33% -20px); /*Adjust width for 3 columns with margins*/
+.skill {
+    flex: 1 1 calc(33.33% - 20px); /* Adjust width for 3 columns with margins */
     margin: 5px;
-    text-align: center; 
+    text-align: center;
 }
 
-.skill-images img {
+.skill img {
     max-height: 100%;
-    width: 105px; 
+    width: 105px;
     padding: 10px;
 }
 
-.skill-images h3 {
+.skill h3 {
     margin-top: 10px;
     color: rgb(6, 166, 6);
-} 
+    font-size: 16px;
+    font-weight: bold;
+}
 
 /* Projects-Page */
 
 .slide-show {
-    display: grid;
-    grid-template-rows: 1fr;
     width: 1000px;
-    height: 400px;
-    background-color: white;
-    margin: 100px auto;  
+    margin: 100px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    transform: translate(0%, 40%); 
-} 
+    transform: translate(0%, 40%);
+}
 
 .slide-show h2 {
     text-align: center;
-}  
-
-.slide-show1 {
-    display: flex; 
-    max-width: 100%; 
-    height: auto;
-    position: relative;
-}  
-
-.project1 img {
-    width: 120px;
-    height: auto;
-} 
-
-.project1 h4 {
-    font-size: 10px;
 }
 
-.content1 p {
-    text-align: center;
-    font-size: 15px;
-} 
-
-
-.slide-show2 {
-    display: flex; 
+.slide {
+    display: flex;
     max-width: 100%;
     height: auto;
     position: relative;
-} 
+    align-items: center;
+}
 
-.project2 img {
+.project img {
     width: 120px;
     height: auto;
 }
 
-.project2 h4 {
-    font-size: 10px;
+.project h4 {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.content2 p {
+.content {
     text-align: center;
     font-size: 15px;
 }
 
-.slide-show3 {
-    display: flex;  
-    max-width: 100%;
-    height: auto;
-    position: relative;
-} 
-
-.project3 img {
-    width: 120px;
-    height: auto;
-} 
-
-.project3 h4 {
-    font-size: 10px;
+.content p {
+    margin: 10px 0;
 }
 
-
-.content2 p {
-    text-align: center;
-    font-size: 15px;
-} 
+.content a {
+    color: rgb(6, 166, 6);
+    text-decoration: none;
+}
 
 .fade {
     animation: fade 3s ease-in-out infinite;
@@ -358,9 +332,10 @@ button:hover {
     }
     20%, 80% {
         opacity: 1;
-        visibility: visible; 
+        visibility: visible;
     }
-} 
+}
+
 
 /* Contact-Page */
 

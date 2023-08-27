@@ -46,8 +46,28 @@ function nextSlide () {
 
 showSlide(currentSlideIndex); 
 
-setInterval(nextSlide, 5000); 
+setInterval(nextSlide, 5000);  
 
 
 //Contact-page 
+
+const sendButton = document.getElementById("send-btn");
+const contactForm = document.getElementById("contact-form"); 
+
+sendButton.addEventListener('click', function () {
+  const name = document.getElementById('name').value;
+  const subject = document.getElementById('subject').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  if (name && subject && email & message) {
+    alert('Form submitted successfully!'); 
+    contactForm.reset(); 
+  } else {
+    alert('Please fill in all required fields.'); 
+  }
+}); 
+
+
+
 

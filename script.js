@@ -5,16 +5,13 @@
         const downloadCVButton = document.getElementById("downloadCV");
   
         // Add event listeners
-        hireMeButton.addEventListener('click', () => {
-            alert('You clicked the "Hire Me" button!');
+        hireMeButton.addEventListener('click', function() {
             window.location.href = 'https://github.com/Monushia';
         }); 
   
-        downloadCVButton.addEventListener('click', () => {
-            alert('You clicked the "Download CV" button!');
+        downloadCVButton.addEventListener('click', function () {
             window.location.href = 'https://www.linkedin.com/feed/';
         }); 
-
 
         //About-page 
 
@@ -27,7 +24,7 @@
         const slideContainer = document.querySelector(".slide-show");
         const slides = slideContainer.querySelectorAll(".slide");
 
-        let currentSlideIndex = 0; 
+        let currentSlideIndex = 0;  
 
         function showSlide (index) {
             for (const slide of slides){
@@ -35,7 +32,7 @@
         }
 
         slides[index].style.display = 'block'; 
-        }
+        }  
 
         function nextSlide () {
             currentSlideIndex = (currentSlideIndex + 1) % slides.length;
@@ -44,7 +41,7 @@
 
         showSlide(currentSlideIndex); 
 
-        setInterval(nextSlide, 5000);  
+        setInterval(nextSlide, 5000);   
 
 
         //Contact-page 
@@ -63,7 +60,7 @@
             contactForm.reset(); 
             } else {
             alert('Please fill in all required fields.'); 
-            }
+            } 
         });  
 
 

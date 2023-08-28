@@ -13,7 +13,7 @@
         downloadCVButton.addEventListener('click', () => {
             alert('You clicked the "Download CV" button!');
             window.location.href = 'https://www.linkedin.com/feed/';
-        });
+        }); 
 
 
         //About-page 

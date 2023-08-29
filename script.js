@@ -1,4 +1,4 @@
-  //Nav-bar 
+  //Hamburger menu 
 
         const hamMenu = document.getElementById("mobile-menu");
         const navBar = document.querySelector(".nav-bar"); 
@@ -8,7 +8,7 @@
         });  
 
    
-  //Home-page buttons 
+  //Home page buttons functionality 
 
         // Get reference to the buttons
         const hireMeButton = document.getElementById("hire-me");
@@ -23,13 +23,13 @@
             window.location.href = 'https://www.linkedin.com/feed/';
         });  
 
-        //About-page 
+    //About-page 
 
 
-        //Skills-page
+    //Skills-page
 
 
-        //Projects-page
+    //Projects-slide=show animation 
 
         const slideContainer = document.querySelector(".slide-show");
         const slides = slideContainer.querySelectorAll(".slide");
@@ -54,24 +54,68 @@
         setInterval(nextSlide, 5000);   
 
 
-        //Contact-page 
+    //Contact-validation 
 
-        const sendButton = document.getElementById('send.btn');
-        const contactForm = document.getElementById("contact-form"); 
+        const contactForm = document.getElementById("contact-form");
+        const nameInput = document.getElementById("name"); 
+        const subjectInput = document.getElementById("subject");
+        const emailInput = document.getElementById("email"); 
+        const messageInput = document.getElementById("message"); 
+        const sendButton = document.getElementById("send.btn"); 
 
-        sendButton.addEventListener('click', () => {
-            const name = document.getElementById('name').value;
-            const subject = document.getElementById('subject').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); 
 
-            if (name && subject && email & message) {
-            alert('Form submitted successfully!'); 
+            const nameValue = nameInput.value.trim(); 
+            const subjectValue = subjectInput.value.trim(); 
+            const emailValue = emailInput.value.trim();
+            const messageValue = messageInput.value.trim();  
+
+            if (nameValue === '') {
+                alert('Please enter your name. '); 
+                nameInput.focus(); 
+                return; 
+            }; 
+
+            if (subjectValue === '') {
+                alert('Please enter a subject. ');
+                subjectInput.focus(); 
+                return; 
+            };
+
+            if (emailValue === '') {
+                alert('Please enter your email. '); 
+                emailInput.focus();  
+                return; 
+
+            } else if (!isValidEmail(emailValue)) {
+                alert('Please enter valid email address. ');
+                emailInput.focus(); 
+                return; 
+
+            }; 
+
+            if (messageValue === '') {
+                alert('Please enter the message. ');
+                messageInput.focus(); 
+                return; 
+            };
+
+            //If all validations pass the form will submit 
+
+            alert ('Form submitted successfully! '); 
             contactForm.reset(); 
-            } else {
-            alert('Please fill in all required fields.'); 
-            } 
-        });  
+
+        }); 
+
+
+        function isValidEmail(email) {
+
+            //Basic email validation using regular expression
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+            return emailPattern.test(email); 
+        };  
+   
 
 
 

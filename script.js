@@ -1,3 +1,13 @@
+  //Nav-bar 
+
+        const hamMenu = document.getElementById("mobile-menu");
+        const navBar = document.querySelector(".nav-bar"); 
+
+        hamMenu.addEventListener('click', function() {
+            navBar.classList.toggle("active"); 
+        });  
+
+   
   //Home-page buttons 
 
         // Get reference to the buttons
@@ -11,7 +21,7 @@
   
         downloadCVButton.addEventListener('click', function () {
             window.location.href = 'https://www.linkedin.com/feed/';
-        }); 
+        });  
 
         //About-page 
 

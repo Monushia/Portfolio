@@ -29,6 +29,19 @@ main {
 
 /* Nav-bar styling */
 
+.ham-menu {
+    display: none;
+    cursor: pointer;
+} 
+
+.ham-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px; 
+    margin: 5px auto;
+    background-color: rgb(2, 153, 2);
+}
+
 .nav-bar {
     background-color: rgb(2, 153, 2);
     position: fixed; 
@@ -58,6 +71,27 @@ main {
     background-color: #ddd;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .ham-menu {
+        display: block;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: rgb(2, 153, 2); 
+        z-index: 2;
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+} 
 
 /* Body styling */
 

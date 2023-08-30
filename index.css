@@ -154,7 +154,8 @@ main {
     height: auto;
     width: 230px;
     border: none;
-    margin-top: 10%;
+    margin-top: 80%;
+    margin-left: -50%;
     padding: 2%; 
     border-radius: 100px;
 } 
@@ -162,21 +163,22 @@ main {
 .title {
     font-weight: bolder; 
     font-style: italic;
-    color: rgb(6, 166, 6);
-    font-size: 1.5vw;
+    color: rgb(5, 148, 5);
+    font-size: 15px; 
     text-align: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 48%;
     margin-left: 100px;
     transform: translate(-50%, -50%);  
 } 
 
-/*
+
 .title h2 {
     animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
 }
 
+/*
 @keyframes typing {
    from {
     width: 80%;
@@ -194,8 +196,7 @@ main {
         border-color: #000;
     }
 }
-*/ 
-
+*/
 
 /* Buttons styling */
 

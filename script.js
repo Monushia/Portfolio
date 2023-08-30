@@ -110,7 +110,6 @@
 
 
         function isValidEmail(email) {
-
             //Basic email validation using regular expression
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
             return emailPattern.test(email); 

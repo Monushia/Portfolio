@@ -402,16 +402,33 @@ button:hover {
 
 /* Contact-Page */
 
+.icon {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    pointer-events: none;
+    transform: translate(-200%, -50%);
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 5px;  
+}
+
 .container5 {
     width: 1000px; 
     height: 500px;
     background-color: white;
     margin: 50px auto;  
-    padding: 20px;
+    padding: 20px; 
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     max-width: 100%;
-    height: auto;
+    height: auto; 
 }
 
 .container5 h2 {
@@ -447,7 +464,8 @@ button:hover {
     margin: 20px 0; 
     border: 1px solid lightgray;
     border-radius: 5px;
-}
+} 
+
 
 .form textarea {
     height: 30px;
@@ -477,10 +495,7 @@ button:hover {
     list-style: none;
     padding: 30px;
 }
-.icons{
-margin-right: 410px;
-transform: translate(0%, 240%);
-}   
+   
 
 
 

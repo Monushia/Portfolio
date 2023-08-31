@@ -68,7 +68,7 @@ main {
 }
 
 .nav-bar li a:hover {
-    background-color: #ddd;
+    background-color: rgb(122, 218, 122); 
     color: white;
 }
 
@@ -295,14 +295,14 @@ button:hover {
 
 /* Projects-Page */
 
+
 .slide-show {
-    display: grid;
     width: 1000px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
-}  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
 .slide-show h2 {
     text-align: center;
@@ -310,51 +310,65 @@ button:hover {
     margin-bottom: 20px;
 }
 
+
 .slide {
-    justify-content: center; 
-    align-items: center;
+    display: flex; /* Add this line */
     margin-bottom: 20px;
     padding: 20px;
     max-width: 100%;
     height: auto;
-    position: relative; 
-}   
+    position: relative;
+} 
 
 .project img {
-    width: 300px;
+    width: 330px;
     max-width: 100%;
     height: auto;
-} 
+    border-radius: 20px;
+    margin-left: 320px;
+}
 
 .project h4 {
     display: flex;
     align-items: flex-start;
     font-size: 18px;
-    margin-top: 10px;
-    color: #ccc;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: rgb(1, 196, 1); 
+    justify-content: center;
 }
 
 .content {
     flex: 5;
-    position: relative;
-    padding-left: 500px; 
-    margin-top: -10px;
+    position: relative; /* Remove padding-left: 500px; */
+    text-align: justify; 
 }
 
-.content a {
-    display: flex; 
-    flex-direction: right;
+.content p a {
+    display: flex;
+    flex-direction: center;
     color: rgb(6, 166, 6);
     text-decoration: none;
-} 
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
 
 .slide:last-child {
     margin-bottom: 0;
-}  
+}
+
+.slider-controls {
+    margin-top: -50px;
+    text-align: center; 
+}
+
+.prev-button, .next-button {
+    width: 150px;
+}
 
 .fade {
-    animation: fade 5s ease-in-out infinite; 
-}  
+    animation: fade 5s ease-in-out infinite;
+}
 
 @keyframes fade {
     0%, 100% {
@@ -365,7 +379,8 @@ button:hover {
         opacity: 1;
         visibility: visible;
     }
-}  
+}
+
 
 /* Contact-Page */
 

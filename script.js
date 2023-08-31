@@ -31,27 +31,35 @@
 
     //Projects-slide=show animation 
 
-        const slideContainer = document.querySelector(".slide-show");
-        const slides = slideContainer.querySelectorAll(".slide");
+    const sliderContainer = document.querySelector(".slider-container");
+    const slides = sliderContainer.querySelectorAll(".slide");
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
 
-        let currentSlideIndex = 0; 
+    let currentSlideIndex = 0;
 
-        function showSlide (index) { 
-            for (const slide of slides){
-            slide.style.display = 'none';  
-        };  
+    function showSlide(index) {
+      slides.forEach((slide) => {
+        slide.style.display = "none";
+      });
 
-        slides[index].style.display = 'block'; 
-        }; 
+      slides[index].style.display = "block";
+    }
 
-        function nextSlide () {
-            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-            showSlide(currentSlideIndex); 
-        }; 
+    function nextSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      showSlide(currentSlideIndex);
+   }
 
-        showSlide(currentSlideIndex); 
+    function prevSlide() {
+      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+      showSlide(currentSlideIndex);
+    }
 
-        setInterval(nextSlide, 5000);     
+   showSlide(currentSlideIndex);
+
+   nextButton.addEventListener("click", nextSlide);
+   prevButton.addEventListener("click", prevSlide); 
 
 
     //Contact-validation 

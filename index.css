@@ -265,30 +265,6 @@ button:hover {
     line-height: 1.5;
 } 
 
-.about-text ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.about-text li {
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
-.about-text li b {
-    font-weight: bold;
-}
-
-.about-text li a {
-    color: rgb(2, 153, 2);
-    text-decoration: none;
-}
-
-.about-text li a:hover {
-    text-decoration: underline;
-}  
-
-
 /* Skills-Page */
 
 
@@ -488,7 +464,16 @@ button:hover {
     list-style: none;
     padding: 30px;
 }
-   
+
+.contact-info li a {
+    color: rgb(2, 153, 2);
+    text-decoration: none;
+}
+
+.contact-info li a:hover {
+    text-decoration: underline;
+}  
+
 
 
 

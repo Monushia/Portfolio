@@ -122,6 +122,18 @@ main {
    object-fit: cover; 
 }  
 
+.links a {
+    /* Your existing styles */
+    transition: background-color 0.5, border-color 0.5s, opacity 0.5s; /* Add transition for smooth effect */
+}
+
+.links a:hover {
+    background-color: rgb(126, 221, 126); /* Change background color on hover */
+    border: 10px solid rgb(3, 217, 3); /* Add a border on hover */
+    opacity: 0.9; /* Reduce opacity on hover */
+}
+
+
 
 /* Body styling */
 
@@ -475,12 +487,12 @@ button:hover {
 
 .contact-info ul li {
     list-style: none;
-    padding: 30px;
+    padding: 10px;
 }
 
 .contact-info li a {
     color: rgb(1, 130, 1);
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .contact-info li a:hover {

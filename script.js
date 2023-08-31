@@ -34,9 +34,9 @@
         const slideContainer = document.querySelector(".slide-show");
         const slides = slideContainer.querySelectorAll(".slide");
 
-        let currentSlideIndex = 0;  
+        let currentSlideIndex = 0; 
 
-        function showSlide (index) {
+        function showSlide (index) { 
             for (const slide of slides){
             slide.style.display = 'none';  
         };  
@@ -63,7 +63,7 @@
         const messageInput = document.getElementById("message"); 
         const sendButton = document.getElementById("send.btn"); 
 
-        contactForm.addEventListener('submit', function (event) {
+        contactForm.addEventListener('submit', function (event) {  
             event.preventDefault(); 
 
             const nameValue = nameInput.value.trim(); 
@@ -75,7 +75,7 @@
                 alert('Please enter your name. '); 
                 nameInput.focus(); 
                 return; 
-            }; 
+            };  
 
             if (subjectValue === '') {
                 alert('Please enter a subject. ');

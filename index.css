@@ -354,7 +354,7 @@ button:hover {
 
 .fade {
     animation: fade 5s ease-in-out infinite; 
-} 
+}  
 
 @keyframes fade {
     0%, 100% {
@@ -365,7 +365,7 @@ button:hover {
         opacity: 1;
         visibility: visible;
     }
-} 
+}  
 
 /* Contact-Page */
 

@@ -38,20 +38,20 @@
 
         function showSlide (index) {
             for (const slide of slides){
-            slide.style.display = 'none'; 
-        }
+            slide.style.display = 'none';  
+        };  
 
         slides[index].style.display = 'block'; 
-        }  
+        }; 
 
         function nextSlide () {
             currentSlideIndex = (currentSlideIndex + 1) % slides.length;
             showSlide(currentSlideIndex); 
-        }
+        }; 
 
         showSlide(currentSlideIndex); 
 
-        setInterval(nextSlide, 5000);   
+        setInterval(nextSlide, 5000);     
 
 
     //Contact-validation 

@@ -128,8 +128,8 @@ main {
 }
 
 .links a:hover {
-    background-color: rgb(126, 221, 126); /* Change background color on hover */
-    border: 10px solid rgb(3, 217, 3); /* Add a border on hover */
+    background-color:  rgb(2, 153, 2);; /* Change background color on hover */
+    border: 10px solid  rgb(2, 153, 2);; /* Add a border on hover */
     opacity: 0.9; /* Reduce opacity on hover */
 }
 

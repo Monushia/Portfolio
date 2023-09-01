@@ -323,6 +323,7 @@ button:hover {
 }
 
 
+ 
 .slide {
     display: flex; /* Add this line */
     margin-bottom: 20px;
@@ -332,12 +333,14 @@ button:hover {
     position: relative;
 } 
 
+
 .project img {
     width: 330px;
     max-width: 100%;
     height: auto;
     border-radius: 20px;
     margin-left: 320px;
+    opacity: 2;
 }
 
 .project h4 {
@@ -392,7 +395,7 @@ button:hover {
         visibility: visible;
     }
 }
-
+ 
 
 /* Contact-Page */
 

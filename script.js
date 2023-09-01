@@ -26,40 +26,34 @@
     //About-page 
 
 
-    //Skills-page
+    //Skills-page - 3D image slider
 
 
-    //Projects-slide=show animation 
 
-    const sliderContainer = document.querySelector(".slider-container");
-    const slides = sliderContainer.querySelectorAll(".slide");
-    const prevButton = document.querySelector(".prev-button");
-    const nextButton = document.querySelector(".next-button");
 
-    let currentSlideIndex = 0;
+    //Projects image slider 
 
-    function showSlide(index) {
-      slides.forEach((slide) => {
-        slide.style.display = "none";
-      });
+        const slideContainer = document.querySelector(".slide-show");
+        const slides = slideContainer.querySelectorAll(".slide");
 
-      slides[index].style.display = "block";
-    }
+        let currentSlideIndex = 0; 
 
-    function nextSlide() {
-      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-      showSlide(currentSlideIndex);
-   }
+        function showSlide (index) { 
+            for (const slide of slides){
+            slide.style.display = 'none';  
+        };  
 
-    function prevSlide() {
-      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-      showSlide(currentSlideIndex);
-    }
+        slides[index].style.display = 'block'; 
+        }; 
 
-   showSlide(currentSlideIndex);
+        function nextSlide () {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex); 
+        }; 
 
-   nextButton.addEventListener("click", nextSlide);
-   prevButton.addEventListener("click", prevSlide); 
+        showSlide(currentSlideIndex); 
+
+        setInterval(nextSlide, 5000);      
 
 
     //Contact-validation 

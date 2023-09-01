@@ -296,15 +296,14 @@ button:hover {
     margin-top: 25%;
     letter-spacing: 3px;
     font-weight: 300;
-}
+} 
 
 .entire-content {
     margin: auto;
-    width: 190px;
+    width: 150px;
     perspective: 1000px;
     position: relative;
-    padding-top: 80px; 
-
+    padding-top: 40px; 
 }
 
 .content-carrousel {

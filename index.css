@@ -395,7 +395,7 @@ button:hover {
     height: 600px;
     width: 100%;
     box-sizing: border-box;
-} 
+}  
 
 .slide-show title {
     font-family: 'Courier New', Courier, monospace;
@@ -480,7 +480,7 @@ button:hover {
 .shadow:hover .info {
     display: block;
 } 
-
+ 
 
 /*
 .slide-show {

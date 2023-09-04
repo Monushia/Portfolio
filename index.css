@@ -282,7 +282,7 @@ button:hover {
 #slideshow {
     margin: 0 auto; 
     padding-top: 180px;
-    height: 600px;
+    height: 500px;
     width: 100%;
     box-sizing: border-box;
 } 
@@ -293,14 +293,15 @@ button:hover {
     color: red;
     margin: 0 auto;
     text-align: center;
-    margin-top: 25%;
+    margin-top: 30%;
     letter-spacing: 3px;
     font-weight: 300;  
 } 
 
 .entire-content {
     margin: auto;
-    width: 120px; 
+    margin-top: -40px;
+    width: 150px; 
     perspective: 1000px;
     position: relative;
     padding-top: 40px; 
@@ -322,7 +323,7 @@ button:hover {
 
 .content-carrousel figure {
     width: 100%; 
-    height: 120px;
+    height: 150px;
     border: 1px solid #3b444b;
     overflow: hidden;
     position: absolute;
@@ -331,19 +332,19 @@ button:hover {
 .content-carrousel figure:nth-child(1) {
     transform: rotateY(0deg) translateZ(300px);
 } .content-carrousel figure:nth-child(2) {
-    transform: rotateY(40deg) translateZ(300px);
+    transform: rotateY(45deg) translateZ(300px);
 } .content-carrousel figure:nth-child(3) {
-    transform: rotateY(80deg) translateZ(300px);
+    transform: rotateY(90deg) translateZ(300px);
 } .content-carrousel figure:nth-child(4) {
-    transform: rotateY(120deg) translateZ(300px);
+    transform: rotateY(135deg) translateZ(300px);
 } .content-carrousel figure:nth-child(5) {
-    transform: rotateY(160deg) translateZ(300px);
+    transform: rotateY(180deg) translateZ(300px);
 } .content-carrousel figure:nth-child(6) {
-    transform: rotateY(200deg) translateZ(300px);
+    transform: rotateY(225deg) translateZ(300px);
 } .content-carrousel figure:nth-child(7) {
-    transform: rotateY(240deg) translateZ(300px);
+    transform: rotateY(270deg) translateZ(300px);
 }  .content-carrousel figure:nth-child(8) {
-    transform: rotateY(280deg) translateZ(300px);
+    transform: rotateY(315deg) translateZ(300px);
 } 
 
 .shadow {
@@ -375,9 +376,6 @@ button:hover {
 /* Projects-Page */
 
 .cont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 1000px;
     height: auto;
     max-width: 1200px;
@@ -385,28 +383,27 @@ button:hover {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);  
-}  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
+.cont h2 {
+    text-align: center;
+}
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    padding: 40px 0;  
- }
+    justify-content: space-between; /* Align boxes horizontally */
+    padding: 40px 0;
+}
 
- .container .box {
-   position: relative;
-   width: 320px;
-   height: 400px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 40px 30px;
-   transition: 0.5s;
- } 
+.container .box {
+    position: relative;
+    width: calc(33.33% - 20px);
+    height: 400px;
+    margin: 20px 0; /* Adjust margin to separate boxes */
+    transition: 0.5s;
+}
 
  .container .box::before{
    content: "";
@@ -445,17 +442,17 @@ button:hover {
 
  .container .box:nth-child(1):before,
  .container .box:nth-child(1):after{
-   background: linear-gradient(315deg, #ffbc00, #ff0058);
+   background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
  }
 
  .container .box:nth-child(2):before,
  .container .box:nth-child(2):after{
-   background: linear-gradient(315deg, #03a9f4, #ff0058);
+    background: linear-gradient(315deg, #00ffb3,  rgb(6, 166, 6));
  }
  
  .container .box:nth-child(3):before,
  .container .box:nth-child(3):after{
-   background: linear-gradient(315deg, #4dff03, #00d0ff);
+    background: linear-gradient(315deg, #00ffb3,  rgb(6, 166, 6));
  }
 
  .container .box span{
@@ -542,7 +539,7 @@ button:hover {
    backdrop-filter: blue(10px);
    z-index: 1;
    transition: 0.5s;
-   color: #fff;
+   color: black;
    /* display: none;; */
  }
 
@@ -551,27 +548,29 @@ button:hover {
  }
 
  .container .box .content h2{
-   font-size: 2em;
-   color: rgb(1, 162, 1); 
-   margin-bottom: 10px;
+   font-size: 22px;
+   color: white; 
+   margin-bottom: 15px;
  }
 
  .container .box .content p{
-   font-size: 1.1em;
-   margin-bottom: 10px;;
+   font-size: 15px;
+   margin-bottom: 10px;
    line-height: 1.4em;
+   text-align: justify;
  }
 
  .container .box .content a{
    display: inline-block;
-   font-size: 1.1em;
-   color: #111;
-   background: #fff;;
-   padding: 10px;;
-   border-radius: 4px;;
+   font-size: 12px;
+   color: white; 
+   background:  rgb(6, 166, 6);
+   padding: 10px;
+   border-radius: 4px;
    text-decoration: none;
    font-weight: 700;
    margin-top: 5px;
+   margin-left: 63px;
  }
 
 

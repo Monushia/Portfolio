@@ -23,38 +23,6 @@
             window.location.href = 'https://www.linkedin.com/feed/';
         });     
 
-    //About-page 
-
-
-    //Skills-page - 3D image slider
-
-
-
-
-    //Projects image slider 
-
-        const slideContainer = document.querySelector(".slide-show");
-        const slides = slideContainer.querySelectorAll(".slide");
-
-        let currentSlideIndex = 0; 
-
-        function showSlide (index) { 
-            for (const slide of slides){
-            slide.style.display = 'none';  
-        };  
-
-        slides[index].style.display = 'block'; 
-        }; 
-
-        function nextSlide () {
-            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-            showSlide(currentSlideIndex); 
-        }; 
-
-        showSlide(currentSlideIndex); 
-
-        setInterval(nextSlide, 5000);      
-
 
     //Contact-validation 
 

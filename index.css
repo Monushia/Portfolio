@@ -383,11 +383,11 @@ button:hover {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
-}
+} 
 
 .cont h2 {
     text-align: center;
-} 
+}  
 
 .container {
     display: flex;
@@ -401,7 +401,7 @@ button:hover {
     width: calc(33.33% - 20px);
     height: 420px;
     margin: 20px 0; /* Adjust margin to separate boxes */
-    transition: 0.5s; 
+    transition: 0.5s;  
 } 
 
  .container .box::before{
@@ -415,21 +415,21 @@ button:hover {
    border-radius: 8px;
    transform: skewX(15deg);
    transition: 0.5s; 
- } 
+ }  
 
  .container .box::after{
-   content: "";
-   position: absolute; 
+   content: ""; 
+   position: absolute;  
    top: 0;
-   left: 50px; 
-   width: 65%;
+   left: 50px;  
+   width: 65%; 
    height: 100%; 
    background: #fff;
    border-radius: 8px;
-   transform: skewX(15deg); 
+   transform: skewX(15deg);  
    transition: 0.5s;
-   filter: blur(30px);
-   transition: 0.5s; 
+   filter: blur(30px); 
+   transition: 0.5s;  
  }
 
  .container .box:hover:before,
@@ -479,14 +479,14 @@ button:hover {
    transition: 0.5s; 
    animation: animate 2s ease-in-out infinite;
    box-shadow: 0 5px 15px rgba(0,0,0,0.0.05);
- }
+ } 
 
  .container .box:hover span::before{
    top:-50px;
    left:50px;
    width: 100px;
    height: 100px;
-   opacity: 1;
+   opacity: 1; 
  }
 
  .container .box span::after{
@@ -507,14 +507,12 @@ button:hover {
  }
 
  .container .box:hover span::after{
- 
    bottom:-50px;
    right:50px;
    width: 100px;
    height: 100px;
    opacity: 1;
-   
- }
+ } 
 
 @keyframes animate {
    0%,100%{
@@ -524,7 +522,6 @@ button:hover {
       transform:translateY(-10px);
    }
 }
-
 
 .container .box .content{
    position: relative;
@@ -537,12 +534,11 @@ button:hover {
    z-index: 1;
    transition: 0.5s;
    color: black;
-   /* display: none;; */
  }
 
  .container .box:hover .content{
    left:-25px;
- }
+ } 
 
  .container .box .content h2{
    font-size: 22px;
@@ -571,189 +567,6 @@ button:hover {
  }
 
 
-/*
-#slide-show {
-    margin: 0 auto; 
-    padding-top: 180px;
-    height: 600px;
-    width: 100%;
-    box-sizing: border-box;
-}  
-
-.slide-show title {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 60px;
-    color: red;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 25%;
-    letter-spacing: 3px;
-    font-weight: 300;  
-} 
-
-.entire-content {
-    margin: auto;
-    width: 200px;
-    perspective: 1000px;
-    position: relative;
-    padding-top: 40px; 
-}
-
-.content-carrousel {
-    width: 100%;
-    position: absolute;
-    float: right;
-    animation: rotor 15s infinite linear;
-    transform-style: preserve-3d;
-
-}
-
-.content-carrousel:hover {
-    animation-play-state: paused;
-    cursor: pointer;
-}
-
-.content-carrousel figure {
-    width: 100%; 
-    height: 120px;
-    border: 1px solid #3b444b;
-    overflow: hidden;
-    position: absolute;
-} 
-
-.content-carrousel figure:nth-child(1) {
-    transform: rotateY(0deg) translateZ(300px);
-} .content-carrousel figure:nth-child(2) {
-    transform: rotateY(40deg) translateZ(300px);
-} .content-carrousel figure:nth-child(3) {
-    transform: rotateY(80deg) translateZ(300px);
-} 
-
-
-.shadow {
-    position: absolute;
-    box-shadow: 0px 0px 20px 0px #000;
-    border-radius: 1px;
-}
-
-.content-carrousel img {
-    image-rendering: auto;
-    transition: all 300ms;
-    width: 100%;
-    height: 100%;
-}
-
-.content-carrousel img:hover {
-    transform: scale(1.2);
-    transition: all 300ms;
-}
-
-@keyframes rotor {
-    from {
-        transform: rotateY(0deg);
-    } to {
-        transform: rotateY(360deg);
-    } 
-} 
-
-.info {
-    display: none;
-}
-
-.shadow:hover .info {
-    display: block;
-} 
- 
-
-/*
-.slide-show {
-    width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-
-.slide-show h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-} 
-
-
- 
-.slide {
-    display: flex; /* Add this line 
-    margin-bottom: 20px;
-    padding: 20px;
-    max-width: 100%;
-    height: auto;
-    position: relative; 
-} 
-
-
-.project img {
-    width: 330px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-    margin-left: 320px;
-}
-
-.project h4 {
-    display: flex;
-    align-items: flex-start;
-    font-size: 18px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: rgb(1, 196, 1); 
-    justify-content: center;
-}
-
-.content {
-    flex: 5;
-    position: relative; /* Remove padding-left: 500px; 
-    text-align: justify; 
-}
-
-.content p a {
-    display: flex;
-    flex-direction: center;
-    color: rgb(6, 166, 6);
-    text-decoration: none;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.slide:last-child {
-    margin-bottom: 0;
-}
-
-.slider-controls {
-    margin-top: -50px;
-    text-align: center; 
-}
-
-.prev-button, .next-button {
-    width: 150px;
-}
-
-.fade {
-    animation: fade 5s ease-in-out infinite;
-}
-
-@keyframes fade {
-    0%, 100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-    20%, 80% {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-
-*/ 
 
 /* Contact-Page */
 

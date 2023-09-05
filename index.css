@@ -32,7 +32,7 @@ main {
 .ham-menu {
     display: none;
     cursor: pointer;
-}  
+}   
 
 .ham-menu .bar {
     display: block;
@@ -123,7 +123,6 @@ main {
 }  
 
 .links a {
-    /* Your existing styles */
     transition: background-color 0.5, border-color 0.5s, opacity 0.5s; /* Add transition for smooth effect */
 }
 
@@ -383,72 +382,72 @@ button:hover {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .cont h2 {
     text-align: center;
-}
+} 
 
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Align boxes horizontally */
-    padding: 40px 0;
-}
+    padding: 40px 0; 
+} 
 
 .container .box {
     position: relative;
     width: calc(33.33% - 20px);
-    height: 400px;
+    height: 420px;
     margin: 20px 0; /* Adjust margin to separate boxes */
-    transition: 0.5s;
-}
+    transition: 0.5s; 
+} 
 
  .container .box::before{
-   content: "";
+   content: ""; 
    position: absolute;
    top: 0;
-   left: 50px;
-   width: 50%;
+   left: 50px; 
+   width: 65%; 
    height: 100%;
-   background: #fff;
+   background: #fff; 
    border-radius: 8px;
    transform: skewX(15deg);
-   transition: 0.5s;
- }
+   transition: 0.5s; 
+ } 
 
  .container .box::after{
    content: "";
-   position: absolute;
+   position: absolute; 
    top: 0;
-   left: 50px;
-   width: 50%;
-   height: 100%;
+   left: 50px; 
+   width: 65%;
+   height: 100%; 
    background: #fff;
    border-radius: 8px;
-   transform: skewX(15deg);
+   transform: skewX(15deg); 
    transition: 0.5s;
    filter: blur(30px);
-   transition: 0.5s;
+   transition: 0.5s; 
  }
 
  .container .box:hover:before,
  .container .box:hover:after{
    transform: skewX(0deg);
    left: 20px;;
-   width: calc(100% - 90px);
+   width: calc(100% - 90px); 
  } 
 
  .container .box:nth-child(1):before,
  .container .box:nth-child(1):after{
    background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
- }
+ } 
 
  .container .box:nth-child(2):before,
  .container .box:nth-child(2):after{
     background: linear-gradient(315deg, #00ffb3,  rgb(6, 166, 6));
- }
+ } 
  
  .container .box:nth-child(3):before,
  .container .box:nth-child(3):after{
@@ -463,7 +462,7 @@ button:hover {
    right: 0;
    bottom: 0;
    z-index: 50;
-   pointer-events: none;
+   pointer-events: none; 
  }
 
  .container .box span::before{
@@ -477,19 +476,17 @@ button:hover {
    background: rgba(255,255,255,0.1);
    backdrop-filter: blue(10px);
    opacity: 0;
-   transition: 0.5s;
+   transition: 0.5s; 
    animation: animate 2s ease-in-out infinite;
    box-shadow: 0 5px 15px rgba(0,0,0,0.0.05);
  }
 
  .container .box:hover span::before{
- 
    top:-50px;
    left:50px;
    width: 100px;
    height: 100px;
    opacity: 1;
-   
  }
 
  .container .box span::after{

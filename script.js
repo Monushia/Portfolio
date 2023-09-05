@@ -16,12 +16,12 @@
   
         // Add event listeners
         hireMeButton.addEventListener('click', function() {
-            window.location.href = 'https://github.com/Monushia';
+            window.location.href = '#contact';
         }); 
   
         downloadCVButton.addEventListener('click', function () {
-            window.location.href = 'https://www.linkedin.com/feed/';
-        });     
+            window.location.href = 'https://monushiaz.netlify.app/Monushia%20Zimri%20Resume%202023%20(2).pdf';
+        });      
 
 
     //Contact-validation 

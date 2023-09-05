@@ -5,7 +5,7 @@
 
         hamMenu.addEventListener('click', function() {
             navBar.classList.toggle("active"); 
-        });  
+        });   
 
    
   //Home page buttons functionality 
@@ -16,12 +16,12 @@
   
         // Add event listeners
         hireMeButton.addEventListener('click', function() {
-            window.location.href = '#contact';
+            window.location.href = '#contact'; 
         }); 
   
         downloadCVButton.addEventListener('click', function () {
             window.location.href = 'https://monushiaz.netlify.app/Monushia%20Zimri%20Resume%202023%20(2).pdf'; 
-        });              
+        });                  
 
 
     //Contact-validation 

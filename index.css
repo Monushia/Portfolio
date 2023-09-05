@@ -5,7 +5,7 @@
     main {
         width: 90%; /* Adjust main container width for smaller screens */
     } 
-} 
+}  
  
 *{
     padding: 0;
@@ -189,25 +189,6 @@ main {
     animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
 }
 
-/*
-@keyframes typing {
-   from {
-    width: 80%;
-   }
-   to {
-    width: 100%;
-   }
-}
-
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #000;
-    }
-}
-*/
 
 /* Buttons styling */
 
@@ -382,7 +363,7 @@ button:hover {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);   
 } 
 
 .cont h2 {
@@ -393,15 +374,16 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Align boxes horizontally */
-    padding: 40px 0; 
+    padding: 40px 0;  
 } 
 
 .container .box {
     position: relative;
     width: calc(33.33% - 20px);
-    height: 420px;
     margin: 20px 0; /* Adjust margin to separate boxes */
     transition: 0.5s;  
+    display: flex;
+    flex-direction: column;
 } 
 
  .container .box::before{
@@ -413,9 +395,9 @@ button:hover {
    height: 100%;
    background: #fff; 
    border-radius: 8px;
-   transform: skewX(15deg);
-   transition: 0.5s; 
- }  
+   transform: skewX(15deg); 
+   transition: 0.5s;   
+ }    
 
  .container .box::after{
    content: ""; 
@@ -487,9 +469,9 @@ button:hover {
    width: 100px;
    height: 100px;
    opacity: 1; 
- }
-
- .container .box span::after{
+ }    
+ 
+ .container .box span::after{ 
    content: "";
    position: absolute;
    bottom: 0;
@@ -509,8 +491,6 @@ button:hover {
  .container .box:hover span::after{
    bottom:-50px;
    right:50px;
-   width: 100px;
-   height: 100px;
    opacity: 1;
  } 
 
@@ -520,7 +500,7 @@ button:hover {
    }
    50%{
       transform:translateY(-10px);
-   }
+   } 
 }
 
 .container .box .content{
@@ -534,6 +514,7 @@ button:hover {
    z-index: 1;
    transition: 0.5s;
    color: black;
+   height: 380px;
  }
 
  .container .box:hover .content{
@@ -543,8 +524,8 @@ button:hover {
  .container .box .content h2{
    font-size: 22px;
    color: white; 
-   margin-bottom: 15px;
- }
+   margin-bottom: 15px;   
+ } 
 
  .container .box .content p{
    font-size: 15px;
@@ -565,7 +546,6 @@ button:hover {
    margin-top: 5px;
    margin-left: 63px;
  }
-
 
 
 /* Contact-Page */

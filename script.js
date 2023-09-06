@@ -21,10 +21,10 @@
   
         downloadCVButton.addEventListener('click', function () {
             window.location.href = 'https://monushiaz.netlify.app/Monushia%20Zimri%20Resume%202023%20(2).pdf'; 
-        });                  
+        });                   
 
 
-    //Contact-validation 
+    //Contact-validation  
 
         const contactForm = document.getElementById("contact-form");
         const nameInput = document.getElementById("name"); 
@@ -83,7 +83,7 @@
             //Basic email validation using regular expression
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
             return emailPattern.test(email); 
-        };  
+        };   
    
 
 

@@ -1,21 +1,46 @@
 @media (max-width: 844px) { 
     body {
-        font-size: 12px; /* Adjust font for smaller screens */
+        font-size: 12px; 
     }
     main {
-        width: 100%; /* Adjust main container width for smaller screens */
-    }  
-}    
- 
+        width: 100%; 
+    }   
+}      
+
+@media (max-width: 390px) {
+
+    body {
+        font-size: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    } 
+
+    .ham-menu {
+        display: none;
+        cursor: pointer;    
+    }     
+    
+    .ham-menu .bar {
+        display: block;
+        width: 25px;
+        height: 3px; 
+        margin: 5px auto;
+        background-color: rgb(2, 153, 2); 
+    }
+}   
+
 *{
     padding: 0;
-    margin: 0;
-}
+    margin: 0; 
+} 
 
 body {
     overflow-x: hidden;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-} 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}  
 
 main {
     width: 1280px;
@@ -24,23 +49,10 @@ main {
 
 #home, #expertise, #projects, #contact {
     width: 100%;
-    height: auto;
+    height: auto; 
 } 
 
 /* Nav-bar styling */
-
-.ham-menu {
-    display: none;
-    cursor: pointer;    
-}     
-
-.ham-menu .bar {
-    display: block;
-    width: 25px;
-    height: 3px; 
-    margin: 5px auto;
-    background-color: rgb(2, 153, 2); 
-}
 
 .nav-bar {
     background-color: rgb(2, 153, 2);
@@ -51,7 +63,7 @@ main {
     list-style: none;
     overflow: hidden;
     min-height: 30px;
-    z-index: 1; 
+    z-index: 2; 
 }  
 
 .nav-bar li {
@@ -70,38 +82,7 @@ main {
 .nav-bar li a:hover {
     background-color: rgb(122, 218, 122); 
     color: white;
-}
-
-@media (max-width: 390px) {
-
-    body {
-        font-size: 10px;
-    }
-
-    .nav-bar {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        background-color: rgb(2, 153, 2); 
-        overflow: hidden;
-        min-height: auto;
-        list-style: none;
-        z-index: 1;
-    } 
-
-    .nav-bar li {
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav-bar li a {
-        display: block;
-        padding: 14px 0;
-    }   
-}    
-
+} 
 
 /* Social links styling */
 
@@ -252,12 +233,11 @@ button:hover {
     padding: 20px;
     margin: 10px;
     text-align: justify;
-    margin-bottom: -130px; 
 }
 
 .about-text h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 24px; 
 }
 
@@ -289,7 +269,7 @@ button:hover {
 
 .entire-content {
     margin: auto;
-    margin-top: 10px;
+    margin-top: -40px;
     width: 150px; 
     perspective: 1000px;
     position: relative;
@@ -302,6 +282,7 @@ button:hover {
     float: right;
     animation: rotor 15s infinite linear;
     transform-style: preserve-3d;
+
 }
 
 .content-carrousel:hover {
@@ -381,17 +362,17 @@ button:hover {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Align boxes horizontally */
+    justify-content: space-between;
     padding: 40px 0;  
 } 
 
 .container .box {
     position: relative;
     width: calc(33.33% - 20px);
-    margin: 20px 0; /* Adjust margin to separate boxes */
+    margin: 20px 0;
     transition: 0.5s;  
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
 } 
 
  .container .box::before{
@@ -512,8 +493,9 @@ button:hover {
 }
 
 .container .box .content{
-   position: relative;
-   left: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; 
    padding: 20px 40px;
    background: rgba(255,255,255,0.05);
    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -522,7 +504,7 @@ button:hover {
    z-index: 1;
    transition: 0.5s;
    color: black;
-   height: 380px;
+   height: 380px; 
  }
 
  .container .box:hover .content{
@@ -539,10 +521,17 @@ button:hover {
    font-size: 15px;
    margin-bottom: 10px;
    line-height: 1.4em;
-   text-align: justify;
+   text-align: justify; 
  }
 
- .container .box .content a{
+ .container .box .content .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+ }
+
+
+ .container .box .content .button-container a{
    display: inline-block;
    font-size: 12px;
    color: white; 
@@ -551,9 +540,8 @@ button:hover {
    border-radius: 4px;
    text-decoration: none;
    font-weight: 700;
-   margin-top: 5px;
-   margin-left: 63px;
- }
+   margin-right: 10px;
+ } 
 
 
 /* Contact-Page */

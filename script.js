@@ -20,7 +20,7 @@
         }); 
   
         downloadCVButton.addEventListener('click', function () {
-            window.location.href = 'https://monushiaz.netlify.app/Monushia%20Zimri%20Resume%202023%20(2).pdf'; 
+            window.location.href = 'https://monushiaz.netlify.app/Monushia%20Zimri%20Resume%202023%20(2).pdf';  
         });                   
 
 

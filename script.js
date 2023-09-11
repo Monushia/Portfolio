@@ -31,7 +31,7 @@
         const subjectInput = document.getElementById("subject");
         const emailInput = document.getElementById("email"); 
         const messageInput = document.getElementById("message"); 
-        const sendButton = document.getElementById("send.btn"); 
+        const sendButton = document.getElementById("send-btn"); 
 
         contactForm.addEventListener('submit', function (event) {  
             event.preventDefault(); 
@@ -73,10 +73,10 @@
 
             //If all validations pass the form will submit 
 
-            alert ('Form submitted successfully! '); 
+            alert ('Email submitted successfully! '); 
             contactForm.reset(); 
 
-        }); 
+        });  
 
 
         function isValidEmail(email) {
@@ -88,27 +88,24 @@
         //Emailjs-validation  
 
         function sendMail() {
-            var params {
-                name: document.getElementById("name").value;  
-                email: document.getElementById("email").value; 
-                message: document.getElementById("message").value; 
+            var params = {
+                name: document.getElementById ("name").value, 
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value, 
             }; 
 
             const serviceID = "service_v5ku1me"; 
-            const templateID = "template_4by0cjg"; 
+            const templateID = "template_4by0cjg";  
     
             emailjs
             .send(serviceID, templateID, params)
             .then((res) => {
-                document.getElementById("name").value="";
+                document.getElementById("name").value=""; 
                 document.getElementById("email").value="";
-                document.getElementById("message").value="";
+                document.getElementById("message").value=""; 
                 console.log(res); 
-                alert("Email send successfully!"); 
-            });
-
-            .catch((err) => console.log("err")); 
-        };   
+            });    
+        };      
 
       
 

@@ -84,6 +84,35 @@
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
             return emailPattern.test(email); 
         };   
+
+        //Emailjs-validation  
+
+        function sendMail() {
+            var params {
+                name: document.getElementById("name").value;  
+                email: document.getElementById("email").value; 
+                message: document.getElementById("message").value; 
+            }; 
+
+            const serviceID = "service_v5ku1me"; 
+            const templateID = "template_4by0cjg"; 
+    
+            emailjs
+            .send(serviceID, templateID, params)
+            .then((res) => {
+                document.getElementById("name").value="";
+                document.getElementById("email").value="";
+                document.getElementById("message").value="";
+                console.log(res); 
+                alert("Email send successfully!"); 
+            });
+
+            .catch((err) => console.log("err")); 
+        };   
+
+      
+
+
    
 
 

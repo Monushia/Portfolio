@@ -104,7 +104,12 @@
                 document.getElementById("email").value="";
                 document.getElementById("message").value=""; 
                 console.log(res); 
-            });    
+            })
+
+            .catch((err) => {
+                console.error(err); 
+                alert("An error occurred while sending the email. Please try again"); 
+            });  
         };      
 
       

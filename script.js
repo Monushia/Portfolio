@@ -21,7 +21,7 @@
   
         downloadCVButton.addEventListener('click', function () {
             window.location.href = 'https://monushiaz.netlify.app/Monushia%20Zimri%20Resume%202023%20(2).pdf';  
-        });                   
+        });                    
 
 
     //Contact-validation  
@@ -51,7 +51,7 @@
                 alert('Please enter a subject. ');
                 subjectInput.focus(); 
                 return; 
-            };
+            };  
 
             if (emailValue === '') {
                 alert('Please enter your email. '); 
@@ -76,7 +76,7 @@
             alert ('Email submitted successfully! '); 
             contactForm.reset(); 
 
-        });  
+        });   
 
 
         function isValidEmail(email) {
@@ -110,7 +110,7 @@
                 console.error(err); 
                 alert("An error occurred while sending the email. Please try again"); 
             });  
-        };      
+        };        
 
       
 

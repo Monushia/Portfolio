@@ -639,7 +639,7 @@ button:hover {
     }
 
     .ham-menu .bar {
-        background-color: white; /* Make the bars white for better visibility */
+        background-color: blue; /* Make the bars white for better visibility */
     }
 
     .nav-bar li {
@@ -678,18 +678,18 @@ button:hover {
     }
 
     .profile-pic img {
-        width: 150px; /* Reduce image size for smaller screens */
-        height: 150px; /* Reduce image size for smaller screens */
+        width: 100px; /* Reduce image size for smaller screens */
+        height: auto; /* Reduce image size for smaller screens */
         margin-top: 5%; /* Adjust margin-top for better positioning on smaller screens */
     }
 
     .title {
         font-size: 8px; /* Reduce font size for smaller screens */
-        top: 50%; /* Adjust top position for smaller screens */
+        top: 45%; /* Adjust top position for smaller screens */
+        justify-content: center;
     }
 
     .buttons {
-        justify-content: center; /* Center-align buttons horizontally on smaller screens */
         margin-right: 0; /* Remove right margin for smaller screens */
         margin-bottom: 20px; /* Add bottom margin for spacing on smaller screens */
     }
@@ -702,22 +702,22 @@ button:hover {
     .container {
         width: 100%; /* Make the container full-width on smaller screens */
         max-width: none; /* Remove the maximum width on smaller screens */
-        margin: 20px auto; /* Adjust the margin for spacing on smaller screens */
-    }
+        margin: 20px auto; /* Adjust the margin for spacing on smaller screens */  
+    }  
 
     .about-text {
         flex: 1;
         padding: 10px; /* Reduce padding for smaller screens */
-        margin: 5px; /* Reduce margin for spacing on smaller screens */
+        margin: 5px; /* Reduce margin for spacing on smaller screens */ 
     }
 
     .about-text h2 {
         font-size: 20px; /* Reduce font size for smaller screens */
-    }
+    } 
 
     .about-text p {
         font-size: 14px; /* Reduce font size for smaller screens */
-    }
+    } 
 
     .slideshow title {
         font-size: 30px; /* Further reduce font size for smaller screens */
@@ -734,7 +734,7 @@ button:hover {
 
     .shadow {
         box-shadow: 0px 0px 5px 0px #000; /* Further reduce shadow size for smaller screens */
-    }
+    } 
 
     .content-carrousel img:hover {
         transform: scale(1.05); /* Further reduce scaling for smaller screens */
@@ -747,7 +747,7 @@ button:hover {
         padding: 20px;
         background-color: white;
         border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
     }
     
     .cont h2 {
@@ -779,7 +779,7 @@ button:hover {
         border-radius: 8px;
         transform: skewX(15deg);
         transition: 0.5s;
-    }
+    }  
     
     .container .box::after {
         content: "";
@@ -867,7 +867,7 @@ button:hover {
     .container .box:hover span::after {
         bottom: -50px;
         right: 0;
-        opacity: 1;
+        opacity: 1;  
     }
     
     @keyframes animate {
@@ -877,7 +877,7 @@ button:hover {
         50% {
             transform: translateY(-10px);
         }
-    }
+    }   
     
     .container .box .content {
         display: flex;
@@ -892,7 +892,7 @@ button:hover {
         transition: 0.5s;
         color: black;
         height: auto;
-    }
+    } 
     
     .container .box:hover .content {
         left: 0;
@@ -942,8 +942,7 @@ button:hover {
     .form button {
         margin-top: 5px;
     }
-    
-}
+}  
 
 
 

@@ -52,8 +52,10 @@ main {
 }
 
 .ham-menu {
+    display: block; /* Show the hamburger menu icon */
+    float: right; /* Align the hamburger icon to the right */
+    margin-right: 10px; /* Add margin for spacing */
     cursor: pointer;
-    display: none; /* Initially hidden on larger screens */
 }
 
 .bar {
@@ -638,23 +640,28 @@ button:hover {
         max-width: 100%; /* Set maximum width to 100% for small screens */
     }
 
-    .nav-bar {
-        min-height: auto; /* Remove the minimum height on smaller screens */
-        background-color: rgb(2, 153, 2); /* Set background color */
+    .ham-menu .bar {
+        background-color: white; /* Make the bars white for better visibility */
     }
 
     .nav-bar li {
-        float: none; /* Remove float to stack list items vertically */
-        text-align: center; /* Center-align list items */
+        display: none; /* Hide the menu items by default on small screens */
     }
 
-    .nav-bar li a {
-        padding: 10px 0; /* Adjust padding for better touch targets */
-        display: block;
+    .nav-bar.open li {
+        display: block; /* Show the menu items when the navigation is open */
     }
 
-    .nav-bar li a:hover {
-        background-color: rgb(122, 218, 122);
+    .nav-bar.open .ham-menu .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-bar.open .ham-menu .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-bar.open .ham-menu .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .links {
@@ -679,8 +686,8 @@ button:hover {
     }
 
     .title {
-        font-size: 12px; /* Reduce font size for smaller screens */
-        top: 30%; /* Adjust top position for smaller screens */
+        font-size: 8px; /* Reduce font size for smaller screens */
+        top: 50%; /* Adjust top position for smaller screens */
     }
 
     .buttons {
@@ -720,7 +727,7 @@ button:hover {
     }
 
     .content-carrousel figure {
-        height: 80px; /* Further reduce height for smaller screens */
+        height: 70px; /* Further reduce height for smaller screens */
     }
 
     .content-carrousel figure:nth-child(1) {

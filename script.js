@@ -3,7 +3,7 @@
         const hamMenu = document.getElementById("mobile-menu");
         const navBar = document.querySelector(".nav-bar"); 
 
-        hamMenu.addEventListener('click', function() {
+        hamMenu.addEventListener("click", function() {
             navBar.classList.toggle("active"); 
         });   
 

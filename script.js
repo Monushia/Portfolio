@@ -1,12 +1,11 @@
   //Hamburger menu 
 
-        const hamMenu = document.getElementById("mobile-menu");
-        const navBar = document.querySelector(".nav-bar"); 
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navBar = document.querySelector(".nav-bar ul");
 
-        hamMenu.addEventListener("click", function() {
-            navBar.classList.toggle("active"); 
-        });   
-
+        mobileMenu.addEventListener("click", () => {
+            navBar.classList.toggle("open");
+        });
    
   //Home page buttons functionality 
 

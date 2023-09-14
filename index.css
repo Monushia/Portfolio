@@ -223,7 +223,7 @@ button:hover {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    height: 500px;
+    height: 500px; 
 }
  
 
@@ -244,7 +244,8 @@ button:hover {
     font-size: 16px;
     line-height: 1.5;
 } 
- 
+
+
 /* Skills-Page */
 
 #slideshow {
@@ -342,205 +343,139 @@ button:hover {
 } 
 
 /* Projects-Page */
+/* Projects-Page */
 
 .cont {
-    width: 950px;
-    height: 600px;
+    width: 900px; 
     margin: 50px auto;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);   
-} 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
 .cont h2 {
     text-align: center;
-}  
+}
 
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 40px 0; 
-    height: auto;  
-} 
+    padding: 40px 0;
+    height: auto;
+}
 
 .container .box {
     position: relative;
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 20px); /* Adjust width calculation */
     margin: 20px 0;
-    transition: 0.5s;  
+    transition: 0.5s;
     display: flex;
-    flex-direction: column;    
-} 
-
- .container .box::before{
-   content: ""; 
-   position: absolute;
-   top: 0;
-   left: 50px; 
-   width: 65%; 
-   height: 100%;
-   background: #fff; 
-   border-radius: 8px;
-   transform: skewX(15deg); 
-   transition: 0.5s;    
- }    
-
- .container .box::after{
-   content: ""; 
-   position: absolute;  
-   top: 0;
-   left: 50px;  
-   width: 65%; 
-   height: 100%; 
-   background: #fff;
-   border-radius: 8px;
-   transform: skewX(15deg);  
-   transition: 0.5s;
-   filter: blur(30px); 
-   transition: 0.5s;  
- }
-
- .container .box:hover:before,
- .container .box:hover:after{
-   transform: skewX(0deg);
-   left: 20px;;
-   width: calc(100% - 90px); 
- } 
-
- .container .box:nth-child(1):before,
- .container .box:nth-child(1):after{
-   background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
- } 
-
- .container .box:nth-child(2):before,
- .container .box:nth-child(2):after{
-    background: linear-gradient(315deg, #00ffb3,  rgb(6, 166, 6));
- } 
- 
- .container .box:nth-child(3):before,
- .container .box:nth-child(3):after{
-    background: linear-gradient(315deg, #00ffb3,  rgb(6, 166, 6));
- }
-
- .container .box span{
-   display: block;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   z-index: 50;
-   pointer-events: none; 
- } 
-
- .container .box span::before{
-   content: "";
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   border: 8px;
-   background: rgba(255,255,255,0.1);
-   backdrop-filter: blue(10px);
-   opacity: 0;
-   transition: 0.5s; 
-   animation: animate 2s ease-in-out infinite;
-   box-shadow: 0 5px 15px rgba(0,0,0,0.0.05);
- }  
-
- .container .box:hover span::before{
-   top:-50px;
-   left:50px;
-   width: 100px;
-   height: 100px;
-   opacity: 1; 
- }    
- 
- .container .box span::after{ 
-   content: "";
-   position: absolute;
-   bottom: 0;
-   right: 0;
-   width: 100%;
-   height: 100%;
-   border: 8px;
-   background: rgba(255,255,255,0.1);
-   backdrop-filter: blue(10px);
-   opacity: 0;
-   transition: 0.5s;
-   animation: animate 2s ease-in-out infinite;
-   box-shadow: 0 5px 15px rgba(0,0,0,0.0.05);
-   animation-delay: -1s;
- }
-
- .container .box:hover span::after{
-   bottom:-50px;
-   right:50px;
-   opacity: 1;
- } 
-
-@keyframes animate {
-   0%,100%{
-      transform:translateY(10px);
-   }
-   50%{
-      transform:translateY(-10px);
-   } 
+    flex-direction: column;
+    max-width: 280px; /* Add a max-width to the boxes */
 }
 
-.container .box .content{
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start; 
-   padding: 20px 40px;
-   background: rgba(255,255,255,0.05);
-   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-   border-radius: 8px;
-   backdrop-filter: blue(10px);
-   z-index: 1;
-   transition: 0.5s;
-   color: black;
-   height: 380px; 
- }
+.container .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 65%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
 
- .container .box:hover .content{
-   left:-25px;
- } 
+.container .box:hover::before {
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
 
- .container .box .content h2{
-   font-size: 22px;
-   color: white; 
-   margin-bottom: 15px;   
- } 
+.container .box:nth-child(1)::before,
+.container .box:nth-child(2)::before,
+.container .box:nth-child(3)::before {
+    background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
+}
 
- .container .box .content p{
-   font-size: 15px;
-   margin-bottom: 10px;
-   line-height: 1.4em;
-   text-align: justify; 
- }
+.container .box span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    pointer-events: none;
+}
 
- .container .box .content .button-container {
+.container .box span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box:hover span::before {
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.container .box .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+    transition: 0.5s;
+    color: black;
+    height: 380px; 
+}
+
+
+.container .box .content h2 {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.541);
+    margin-bottom: 10px;
+}
+
+.container .box .content p {
+    font-size: 15px;
+    margin-bottom: 5px;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+.container .box .content .button-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5px;
- }
+}
 
-
- .container .box .content .button-container a{
-   display: inline-block;
-   font-size: 12px;
-   color: white; 
-   background:  rgb(6, 166, 6);
-   padding: 10px;
-   border-radius: 4px;
-   text-decoration: none;
-   font-weight: 700;
-   margin-right: 10px;
- } 
+.container .box .content .button-container a {
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+    background: rgb(4, 190, 4);
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700; 
+}
 
 
 /* Contact-Page */

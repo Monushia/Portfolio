@@ -343,18 +343,8 @@ button:hover {
 } 
 
 /* Projects-Page */
-/* Projects-Page */
 
-.cont {
-    width: 900px; 
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-
-.cont h2 {
+h2 {
     text-align: center;
 }
 
@@ -368,12 +358,11 @@ button:hover {
 
 .container .box {
     position: relative;
-    width: calc(33.33% - 20px); /* Adjust width calculation */
+    width: calc(33.33% - 20px); 
     margin: 20px 0;
     transition: 0.5s;
     display: flex;
     flex-direction: column;
-    max-width: 280px; /* Add a max-width to the boxes */
 }
 
 .container .box::before {
@@ -392,13 +381,13 @@ button:hover {
 .container .box:hover::before {
     transform: skewX(0deg);
     left: 20px;
-    width: calc(100% - 90px);
+    width: 240px; 
 }
 
 .container .box:nth-child(1)::before,
 .container .box:nth-child(2)::before,
 .container .box:nth-child(3)::before {
-    background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
+background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
 }
 
 .container .box span {
@@ -498,15 +487,14 @@ button:hover {
 }
 
 .container5 {
-    width: 900px; 
-    height: 400px;
+    width: 850px; 
+    height: auto;
     background-color: white;
     margin: 50px auto;  
     padding: 20px; 
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     max-width: 100%;
-    height: auto; 
 }
 
 .container5 h2 {
@@ -551,7 +539,7 @@ button:hover {
 
 
 .form button {
-    background-color: rgb(6, 166, 6);
+    background: rgb(4, 190, 4);
     color: white;
     border: none;
     padding: 10px 20px;

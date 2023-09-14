@@ -110,8 +110,43 @@
                 console.error(err); 
                 alert("An error occurred while sending the email. Please try again"); 
             });  
-        };        
+        };   
+        
+        
+        //Recaptcha validation
 
+        const express = require('express'); 
+        const bodyParser = require('body-parser');
+        const fetch = require('node-fetch');
+        
+        const app = express();
+        app.use(bodyParser.urlencoded({ extended: false }));
+        app.use(bodyParser.json());
+        
+        app.post('/submit-form', async (req, res) => {
+          const { recaptchaToken } = req.body;
+        
+          // Verify the reCAPTCHA token with Google
+          const secretKey = '6LeYASUoAAAAAJwRjwFKmT2xGRToTEztd-G6SEA3'; 
+          const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
+        
+          const response = await fetch(verificationUrl, { method: 'POST' });
+          const data = await response.json();
+        
+          if (data.success) {
+            // reCAPTCHA verification passed; process the form submission
+            // Your email sending logic should go here
+            res.send('Form submitted successfully!');
+          } else {
+            // reCAPTCHA verification failed
+            res.status(400).send('reCAPTCHA verification failed.');
+          }
+        });
+        
+        app.listen(3000, () => {
+          console.log('Server is running on port 3000');
+        });
+        
       
 
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css"> 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -164,7 +165,8 @@
                                 <input type="text" placeholder="Email (required)" id="email">
                                 <img class="icon" src="images/email.icon.png" id="email-icon">
                             </div>
-                            <textarea id="message" placeholder="Message (required)"></textarea>   
+                            <textarea id="message" placeholder="Message (required)"></textarea> 
+                            <div class="g-recaptcha" data-sitekey="6LeYASUoAAAAAFFy--WOctrbNa0dEi97OB3y8xKw"></div>
                             <button id="send-btn" onclick="sendMail()">Send</button>      
                         </form>   
                     </div>    
@@ -174,7 +176,7 @@
                             <li><b>Email:</b> <br> <a href="mailto:monushiazimri@gmail.com">monushiazimri@gmail.com</a></li>
                         </ul>    
                     </div> 
-                </div>  
+                </div>   
            </div>
         </div>   
     <script src="script.js"></script>

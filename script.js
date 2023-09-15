@@ -4,7 +4,7 @@
         const navBar = document.querySelector(".nav-bar ul");
 
         mobileMenu.addEventListener("click", () => {
-            navBar.classList.toggle("open");
+            navBar.classList.toggle("open");  
         });
    
   //Home page buttons functionality 
@@ -75,7 +75,7 @@
             alert ('Email submitted successfully! '); 
             contactForm.reset(); 
 
-        });   
+        });    
 
 
         function isValidEmail(email) {
@@ -144,7 +144,7 @@
         
         app.listen(3000, () => {
           console.log('Server is running on port 3000');
-        });
+        });  
         
       
 

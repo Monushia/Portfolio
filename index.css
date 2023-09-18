@@ -20,18 +20,20 @@ main {
 #contact {
     width: 100%;
     height: auto;
-}
+} 
 
 /* Nav-bar styling */
 
 .nav-bar {
     background-color: rgb(2, 153, 2);
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    list-style: none;
-    z-index: 1;
+    display: flex; /* Use flexbox to center horizontally and vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 2;
     height: 50px; 
 }  
 
@@ -39,24 +41,25 @@ main {
     padding: 0;
     margin: 0;
     list-style: none;
-}
+    display: flex; /* Use flexbox to center horizontally and vertically */
+    align-items: center; /* Center vertically */
+} 
 
 .nav-bar li {
-    float: left;
-    list-style-type:none; 
+    list-style-type: none;
 }
 
 .nav-bar li a {
     padding: 10px 16px;
     text-decoration: none;
-    color:  white;
+    color: white;
     height: 50px; 
-} 
+}
 
 .nav-bar li a:hover {
     background-color: rgb(122, 218, 122);
-} 
-
+}
+ 
  
 /* Social links styling */
 
@@ -337,7 +340,7 @@ h2 {
     transition: 0.5s;
     display: flex;
     flex-direction: column;
-}
+} 
 
 .container .box::before {
     content: "";
@@ -371,7 +374,6 @@ background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 50;
     pointer-events: none;
 }
 

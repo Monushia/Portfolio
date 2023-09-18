@@ -1,7 +1,7 @@
-
 * {
     padding: 0;
-    margin: 0; 
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,11 +10,14 @@ body {
 }
 
 main {
-    width: 1000px;
+    max-width: 1000px;
     margin: auto;
 }
 
-#home, #expertise, #projects, #contact {
+#home,
+#about,
+#projects,
+#contact {
     width: 100%;
     height: auto;
 }
@@ -23,15 +26,14 @@ main {
 
 .nav-bar {
     background-color: rgb(2, 153, 2);
-    position: fixed;
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     list-style: none;
-    overflow: hidden;
-    z-index: 2;
-    height: 50px; /* Adjust the height as needed */
-}
+    z-index: 1;
+    height: 50px; 
+}  
 
 .nav-bar ul {
     padding: 0;
@@ -41,48 +43,21 @@ main {
 
 .nav-bar li {
     float: left;
-    list-style-type: none;
+    list-style-type:none; 
 }
 
 .nav-bar li a {
-    display: block;
-    text-align: center;
-    padding: 10px 16px; /* Adjust the padding as needed */
+    padding: 10px 16px;
     text-decoration: none;
-    color: #fff; /* Set the text color to white */
-}
+    color:  white;
+    height: 50px; 
+} 
 
 .nav-bar li a:hover {
     background-color: rgb(122, 218, 122);
-}
+} 
 
-.ham-menu {
-    display: block;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.bar {
-    width: 30px;
-    height: 3px;
-    margin: 6px 0;
-    transition: 0.4s;
-    background-color: #fff; /* Set the bar color to white */
-}
-
-.nav-bar.open .ham-menu .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.nav-bar.open .ham-menu .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.nav-bar.open .ham-menu .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
+ 
 /* Social links styling */
 
 .links { 
@@ -120,7 +95,6 @@ main {
     border: 10px solid  rgb(2, 153, 2);; /* Add a border on hover */
     opacity: 0.9; /* Reduce opacity on hover */
 } 
-
 
 
 /* Body styling */
@@ -580,25 +554,6 @@ background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
         box-sizing: auto;
     } 
 
-    .section {
-        font-size: 10px; /* Adjust the font size for smaller screens */
-        margin: auto; 
-        width: auto;
-        height: auto;
-    }  
-
-    .nav-bar ul {
-        display: none; /* Hide the navigation menu on small screens */
-    }
-
-    .ham-menu {
-        display: block; /* Show the hamburger menu on small screens */
-    }
-
-    .nav-bar.open .ham-menu .bar {
-        display: block; /* Show the hamburger menu bars when menu is open */
-    } 
-
     .background-image {
         height: 300px;
     } 
@@ -619,7 +574,7 @@ background: linear-gradient(315deg, #00ffb3, rgb(6, 166, 6));
         margin-right: 2px;
     }
 
-}      
+}       
 
 
 

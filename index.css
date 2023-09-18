@@ -488,7 +488,7 @@ h2 {
     align-items: center;
     margin-bottom: 20px;
     border-radius: 5px;
-}
+}  
 
 .container5 {
     background-color: white;
@@ -503,7 +503,7 @@ h2 {
 .information {
     display: flex; /* Use flexbox for small screens */
     flex-direction: column; /* Stack content on top of each other */
-}
+} 
 
 .form {
     padding: 30px;

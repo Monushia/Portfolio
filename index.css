@@ -254,7 +254,7 @@ main {
 }
 
 #about {
-    width: 920px;
+    width: 900px;
     margin: 0 auto; 
     padding: 20px; 
 }
@@ -275,7 +275,7 @@ main {
     padding: 20px;
     margin: 10px;
     text-align: justify;
-}
+} 
 
 .about-text h2 {
     text-align: center;
@@ -393,7 +393,7 @@ main {
 }
 
 #projects {
-    width: 100%; /* Occupy full width of the viewport */
+    width: 850px; /* Occupy full width of the viewport */
     margin: 0 auto;
     padding: 20px;
     background-color: white;
@@ -529,10 +529,10 @@ h2 {
 }
 
 #contact {
-    width: 100%; /* Occupy full width of the viewport */
+    width: 900px; /* Occupy full width of the viewport */
     margin: 0 auto;
     padding: 20px;
-}
+}  
 
 .icon {
     width: 20px;

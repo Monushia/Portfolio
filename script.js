@@ -1,11 +1,11 @@
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navBar = document.querySelector(".nav-bar ul");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const navBar = document.querySelector(".nav-bar ul");
 
-    mobileMenu.addEventListener("click", () => {
-        navBar.classList.toggle("open");
-    }); 
-   
-  //Home page buttons functionality 
+            mobileMenu.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            }); 
+        
+        //Home page buttons functionality 
 
         // Get reference to the buttons
         const hireMeButton = document.getElementById("hire-me");
@@ -107,40 +107,43 @@
                 console.error(err); 
                 alert("An error occurred while sending the email. Please try again"); 
             });  
-        };    
+         };    
+         
         
-        
 
-        //Recaptcha validation
-        function enableSubmitButton() {
+            // Recaptcha validation
 
-            document.getElementById('send-btn').disabled = false;
-    
-          }
-
-          function handleSubmit(event) {
-    
-            event.preventDefault();
-    
-            const recaptchaResponse = grecaptcha.getResponse();
-    
-            if (!recaptchaResponse) {
-    
-              alert('Please complete the reCAPTCHA before submitting the form.');
-    
-            } else {
-
+            function enableSubmitButton() {
+                document.getElementById('send-btn').disabled = false;
             }
-          }
-    
-          document.getElementById('form').addEventListener('submit', handleSubmit);
-    
-          grecaptcha.ready(function() {
-    
-            grecaptcha.execute('6LeYASUoAAAAAFFy--WOctrbNa0dEi97OB3y8xKw', {action: 'submit' }).then(enableSubmitButton);
-    
-          });   
-      
+            
+            function handleSubmit(event) {
+                event.preventDefault();
+            
+                const recaptchaResponse = grecaptcha.getResponse();
+            
+                if (!recaptchaResponse) {
+                alert('Please complete the reCAPTCHA before submitting the form.');
+                } else {
+                // If the reCAPTCHA is completed, you can call your sendMail function here.
+                sendMail();
+                }
+            }
+            
+            // Add an event listener to the form element
+            document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+            
+            // Ensure the submit button is initially disabled
+            document.getElementById('send-btn').disabled = true;
+            
+            grecaptcha.ready(function() {
+                grecaptcha
+                .execute('6LeYASUoAAAAAFFy--WOctrbNa0dEi97OB3y8xKw', { action: 'submit' })
+                .then(enableSubmitButton);
+            });   
+  
+
+  
 
 
    

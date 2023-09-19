@@ -234,7 +234,7 @@ button {
 
 button:hover {
     background-color: rgb(130, 229, 130);
-} 
+}  
 
 
 /*About-Page */ 
@@ -770,9 +770,9 @@ h2 {
         font-size: 10px;
     }  
 
-    .box .content h2 {
+    .content h2 {
         font-size: 10px;  
-    }        
+    }     
  
     #contact {
         width: 300px;
@@ -781,7 +781,7 @@ h2 {
 
     .input-group {
         flex-direction: column; /* Stack input elements vertically on smaller screens */
-    }  
+    } 
 
     .icon {
         transform: none; /* Reset the icon position */
@@ -798,16 +798,11 @@ h2 {
 
     .g-recaptcha {
         transform: scale(0.8);
-    }  
-
-    
-
-
-
-
-
-}
+    }    
+}  
   
+
+
 
 
 

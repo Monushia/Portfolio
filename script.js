@@ -110,40 +110,36 @@
         };    
         
         
-        //Recaptcha validation
 
-        const express = require('express'); 
-        const bodyParser = require('body-parser');
-        const fetch = require('node-fetch');
-        
-        const app = express();
-        app.use(bodyParser.urlencoded({ extended: false }));
-        app.use(bodyParser.json());
-        
-        app.post('/submit-form', async (req, res) => {
-          const { recaptchaToken } = req.body;
-        
-          // Verify the reCAPTCHA token with Google
-          const secretKey = '6LeYASUoAAAAAJwRjwFKmT2xGRToTEztd-G6SEA3'; 
-          const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
-        
-          const response = await fetch(verificationUrl, { method: 'POST' });
-          const data = await response.json();
-        
-          if (data.success) {
-            // reCAPTCHA verification passed; process the form submission
-            // Your email sending logic should go here
-            res.send('Form submitted successfully!');
-          } else {
-            // reCAPTCHA verification failed
-            res.status(400).send('reCAPTCHA verification failed.');
+        //Recaptcha validation
+        function enableSubmitButton() {
+
+            document.getElementById('send-btn').disabled = false;
+    
           }
-        });
-        
-        app.listen(3000, () => {
-          console.log('Server is running on port 3000');
-        });  
-        
+
+          function handleSubmit(event) {
+    
+            event.preventDefault();
+    
+            const recaptchaResponse = grecaptcha.getResponse();
+    
+            if (!recaptchaResponse) {
+    
+              alert('Please complete the reCAPTCHA before submitting the form.');
+    
+            } else {
+
+            }
+          }
+    
+          document.getElementById('form').addEventListener('submit', handleSubmit);
+    
+          grecaptcha.ready(function() {
+    
+            grecaptcha.execute('6LeYASUoAAAAAFFy--WOctrbNa0dEi97OB3y8xKw', {action: 'submit' }).then(enableSubmitButton);
+    
+          });   
       
 
 

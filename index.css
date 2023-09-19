@@ -62,6 +62,7 @@ main {
 }
 
 /* Hamburger menu styling */
+
 .ham-menu {
     display: none;
     flex-direction: column;
@@ -78,6 +79,7 @@ main {
 }
 
 /* Mobile menu styling */
+
 .open {
     display: block;
 }
@@ -109,7 +111,7 @@ main {
     color: white;
     text-align: center;
     width: 100%;
-}
+}   
 
 /* Social links styling */
 
@@ -164,7 +166,7 @@ main {
     justify-content: center;
     z-index: -1;
     transform: translate3d(0px, 0px, 0px);
-}
+} 
 
 .main1 {
     display: flex;
@@ -403,6 +405,7 @@ main {
 
 h2 {
     text-align: center;
+    font-size: 13px; 
 }
 
 .container {
@@ -519,7 +522,7 @@ h2 {
     border-radius: 4px;
     text-decoration: none;
     font-weight: 700;
-}
+} 
 
 /* Contact-Page */ 
 * {
@@ -608,147 +611,200 @@ h2 {
 }
 
 
-@media (max-width: 390px) {
+@media (max-width: 390px) { 
 
-    .nav-bar li a {
-        font-size: 16px;
-        padding: 10px 15px;
+    .ham-menu {
+        display: block; /* Show the hamburger menu */ 
+    }
+
+    .nav-bar.open {
+        background-color: rgba(2, 153, 2, 0.8);
+        transition: background-color 0.3s ease-in-out;
     } 
 
     .nav-bar.open ul {
-        top: 50px;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(2, 153, 2, 0.8);
+        padding-top: 50px; /* To account for the height of the fixed navigation bar */
     } 
+
+    .nav-bar.open li {
+        margin: 20px 0;
+    } 
+
+    .nav-bar.open a {
+        font-size: 22px;
+        padding: 10px 0;
+        color: white;
+        text-align: center;
+        width: 100%;
+    }   
 
     .links a {
-        width: 30px;
-        height: 30px;
-    } 
+        width: 15px;
+        height: 15px;
+    }   
 
     .profile-pic img {
-        width: 130px; 
+        width: 100px; 
         margin-top: 40%;
-        margin-left: 60%; 
-    } 
+        margin-left: -8%;
+    }     
 
     .background-image {
         height: 50vh;
         background-image: contain;
-    }
+    }    
 
     .title {
-        font-size: 6px;
+        font-size: 6.5px;
         text-align: center;
         margin: 0 auto;
-    }
+        margin-top: 50px; 
+        margin-left: 10%;  
+    }   
 
     .buttons {
-        margin-right: 10px;
-    } 
+        margin-right: 100px;
+        margin-top: 260px;
+        display: block; 
+    }     
 
     button {
-        padding: 8px 15px;
-        font-size: 14px; 
-    } 
+        padding: 6px 10px;
+        font-size: 10px; 
+        width: auto; 
+    }        
 
     #about {
-        width: 100%; /* Adjust the width to occupy the full width of the viewport */
-        padding: 10px; /* Reduce padding for smaller screens */
-    } 
+        width: 350px; /* Adjust the width to occupy the full width of the viewport */
+        padding: 8px; /* Reduce padding for smaller screens */
+    }  
 
     .container {
         flex-direction: column; /* Stack content vertically on smaller screens */
         align-items: center; /* Center content horizontally on smaller screens */
         margin: 10px; /* Reduce margin for smaller screens */ 
-    } 
+    }  
 
     .about-text {
         flex: 1;
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 8px; /* Reduce padding for smaller screens */
         text-align: center; /* Center text on smaller screens */
-    }
+    } 
 
     .about-text h2 {
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 15px; /* Adjust font size for smaller screens */
         margin-bottom: 10px;
-    } 
+    }   
 
     .about-text p {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-
-    #slideshow {
-        margin: 10px auto;
-        margin-bottom: 2px;
-        padding-top: 20px;
-        height: 50vh; /* Adjust the height as needed for smaller screens */
-    }
-
-    .slideshow title {
-        font-size: 40px; /* Adjust font size for smaller screens */
-        margin-top: 20%; /* Adjust margin-top for smaller screens */
+        font-size: 10px; /* Adjust font size for smaller screens */
+        text-align: justify;
     } 
 
+    #slideshow {
+        margin: 5px auto;
+        margin-bottom: 2px;
+        padding-top: 15px;
+        height: 20vh; /* Adjust the height as needed for smaller screens */
+    } 
+
+    .slideshow title {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        margin-top: 10%; /* Adjust margin-top for smaller screens */
+    }  
+
     .entire-content {
-        width: 100%; /* Adjust width to occupy the full width of the viewport */
+        width: 10px; /* Adjust width to occupy the full width of the viewport */
         padding-top: 20px; /* Adjust padding for smaller screens */
-    }
+    }    
 
     .content-carrousel {
         animation: none; /* Disable the animation on smaller screens */
         transform-style: flat; /* Use flat transform style for compatibility */
-    }
+    } 
 
     .content-carrousel figure {
-        width: 100%;
+        width: 80px;
         height: auto; /* Adjust height as needed for smaller screens */
         transform: none; /* Remove transforms for smaller screens */
-    }
+    }     
 
     .content-carrousel img {
         transform: none; /* Remove transforms for smaller screens */
     }
 
     #projects {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
+        width: 300px;
+        padding: 8px; /* Adjust padding for smaller screens */ 
+    } 
 
     .container .box {
-        width: 100%; /* Occupy full width on smaller screens */
-    }
+        width: 200px; /* Occupy full width on smaller screens */
+    }     
 
     .container .box::before {
-        left: 10px; /* Adjust the left position on smaller screens */
-        width: 100%; /* Adjust the width on smaller screens */
-    }
+        left: 2px; /* Adjust the left position on smaller screens */
+        width: 120px; /* Adjust the width on smaller screens */
+    }           
 
     .container .box:hover::before {
         transform: skewX(0deg);
-    }
+    }   
 
     .container .box span::before {
         top: -10px; /* Adjust the top position on smaller screens */
         left: 5px; /* Adjust the left position on smaller screens */
-        width: 30px; /* Adjust the width on smaller screens */
-        height: 30px; /* Adjust the height on smaller screens */
-    }
+        width: 20px; /* Adjust the width on smaller screens */
+        height: 20px; /* Adjust the height on smaller screens */
+    }    
+    
+    .container .box .content p {
+        font-size: 10px;
+    }  
 
+    .box .content h2 {
+        font-size: 10px;  
+    }        
+ 
     #contact {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
+        width: 300px;
+        padding: 5px; /* Adjust padding for smaller screens */
+    }   
 
     .input-group {
         flex-direction: column; /* Stack input elements vertically on smaller screens */
-    }
+    }  
 
     .icon {
         transform: none; /* Reset the icon position */
         margin-bottom: 5px; /* Add some space between the icon and input */
-    }
+        margin-left: -30px;
+        margin-top: -9px;  
+        width: 15px;   
+    }            
 
     .form input,
     .form textarea {
-        margin: 5px 0; /* Adjust margin for smaller spacing */
-    }
+        margin: 3px 0; /* Adjust margin for smaller spacing */
+    }    
+
+    .g-recaptcha {
+        transform: scale(0.8);
+    }  
+
+    
+
+
+
+
 
 }
   

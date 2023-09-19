@@ -22,6 +22,11 @@ main {
     height: auto;
 }
 
+.section h2 {
+    font-size: 24px;
+    text-align: center; 
+}
+
 /* Nav-bar styling */
 
 .nav-bar {
@@ -43,7 +48,7 @@ main {
     list-style: none;
     display: flex;
     align-items: center;
-}
+} 
 
 .nav-bar li {
     list-style-type: none;
@@ -63,11 +68,15 @@ main {
 
 /* Hamburger menu styling */
 
-.ham-menu {
+.menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
 }
 
 .bar {
@@ -75,43 +84,15 @@ main {
     height: 3px;
     background-color: white;
     margin: 4px 0;
-    transition: 0.4s;
+    transition: 0.4s; 
 }
 
-/* Mobile menu styling */
-
-.open {
-    display: block;
+/* Initial state: hide the menu */
+.nav-bar {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
-.nav-bar.open {
-    background-color: rgba(2, 153, 2, 0.8);
-    transition: background-color 0.3s ease-in-out;
-}
-
-.nav-bar.open ul {
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(2, 153, 2, 0.8);
-    padding-top: 50px; /* To account for the height of the fixed navigation bar */
-}
-
-.nav-bar.open li {
-    margin: 20px 0;
-}
-
-.nav-bar.open a {
-    font-size: 22px;
-    padding: 10px 0;
-    color: white;
-    text-align: center;
-    width: 100%;
-}   
 
 /* Social links styling */
 
@@ -179,13 +160,13 @@ main {
 .profile-pic img {
     max-width: 100%;
     height: auto;
-    width: 230px;
+    width: 250px;
     border: none;
     margin-top: 80%;
     margin-left: -50%;
     padding: 2%;
     border-radius: 100px;
-}
+} 
 
 .title {
     font-weight: bolder;
@@ -198,11 +179,7 @@ main {
     left: 48%;
     margin-left: 100px;
     transform: translate(-50%, -50%);
-}
-
-.title h2 {
-    animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
-}
+} 
 
 /* Buttons styling */
 
@@ -280,7 +257,6 @@ main {
 } 
 
 .about-text h2 {
-    text-align: center;
     margin-bottom: 10px;
     font-size: 24px;
 }
@@ -388,25 +364,22 @@ main {
 } 
 
 /* Projects-Page */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} 
 
 #projects {
-    width: 850px; /* Occupy full width of the viewport */
+    width: 820px; /* Occupy full width of the viewport */
     margin: 0 auto;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
+}  
 
-h2 {
-    text-align: center;
-    font-size: 13px; 
-}
 
 .container {
     display: flex;
@@ -440,8 +413,8 @@ h2 {
 
 .container .box:hover::before {
     transform: skewX(0deg);
-    left: 20px;
-    width: 100%; /* Adjust the width on smaller screens */
+    left: 8px;
+    width: 100%;  
 }
 
 .container .box:nth-child(1)::before,
@@ -504,7 +477,7 @@ h2 {
 .container .box .content p {
     font-size: 15px;
     margin-bottom: 5px;
-    line-height: 1.4em;
+    line-height: 1.4em; 
     text-align: justify;
 }
 
@@ -517,7 +490,7 @@ h2 {
     display: inline-block;
     font-size: 12px;
     color: white;
-    background: rgb(4, 190, 4);
+    background: rgba(0, 0, 0, 0.541);  
     padding: 10px;
     border-radius: 4px;
     text-decoration: none;
@@ -525,6 +498,7 @@ h2 {
 } 
 
 /* Contact-Page */ 
+
 * {
     padding: 0;
     margin: 0;
@@ -532,10 +506,10 @@ h2 {
 }
 
 #contact {
-    width: 900px; /* Occupy full width of the viewport */
+    width: 860px; 
     margin: 0 auto;
     padding: 20px;
-}  
+}     
 
 .icon {
     width: 20px;
@@ -560,7 +534,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
-}
+} 
 
 .container5 h2 {
     text-align: center;
@@ -612,39 +586,27 @@ h2 {
 
 
 @media (max-width: 390px) { 
+    
+    .menu-toggle {
+        display: block; /* Show the hamburger menu icon */
+      }
+    
+      .nav-bar ul {
+        display: none; /* Hide the navigation links */
+      }  
+    
+      /* When the menu is open, display the navigation links */
 
-    .ham-menu {
-        display: block; /* Show the hamburger menu */ 
-    }
-
-    .nav-bar.open {
-        background-color: rgba(2, 153, 2, 0.8);
-        transition: background-color 0.3s ease-in-out;
-    } 
-
-    .nav-bar.open ul {
+      .nav-bar.open ul {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         background-color: rgba(2, 153, 2, 0.8);
-        padding-top: 50px; /* To account for the height of the fixed navigation bar */
-    } 
-
-    .nav-bar.open li {
-        margin: 20px 0;
-    } 
-
-    .nav-bar.open a {
-        font-size: 22px;
-        padding: 10px 0;
-        color: white;
-        text-align: center;
-        width: 100%;
-    }    
+        position: absolute;
+        top: 25px; /* Adjust based on your navigation bar height */
+        left: 10px;
+        width: calc(20% - 10px);
+        padding-top: 5px; /* To account for the height of the fixed navigation bar */
+      }   
 
     .links a {
         width: 15px;
@@ -660,15 +622,15 @@ h2 {
     .background-image {
         height: 50vh;
         background-image: contain;
-    }    
+    }     
 
     .title {
-        font-size: 6.5px;
+        font-size: 10px; 
         text-align: center;
         margin: 0 auto;
         margin-top: 50px; 
-        margin-left: 10%;  
-    }    
+        margin-left: 10%; 
+    }     
 
     .buttons {
         margin-right: 100px;
@@ -680,7 +642,7 @@ h2 {
         padding: 6px 10px;
         font-size: 10px; 
         width: auto; 
-    }        
+    }         
 
     #about {
         width: 350px; /* Adjust the width to occupy the full width of the viewport */
@@ -713,33 +675,31 @@ h2 {
         margin: 5px auto;
         margin-bottom: 2px;
         padding-top: 15px;
-        height: 20vh; /* Adjust the height as needed for smaller screens */
-    } 
-
-    .slideshow title {
-        font-size: 20px; /* Adjust font size for smaller screens */
-        margin-top: 10%; /* Adjust margin-top for smaller screens */
+        height: 10vh; /* Adjust the height as needed for smaller screens */
     }  
 
-    .entire-content {
-        width: 10px; /* Adjust width to occupy the full width of the viewport */
-        padding-top: 20px; /* Adjust padding for smaller screens */
-    }    
-
-    .content-carrousel {
-        animation: none; /* Disable the animation on smaller screens */
-        transform-style: flat; /* Use flat transform style for compatibility */
-    } 
+    #slideshow {
+        padding-top: 60px; /* Increase the top padding to make room for smaller images */
+        height: auto; /* Let the height adjust automatically */
+    }
 
     .content-carrousel figure {
-        width: 80px;
-        height: auto; /* Adjust height as needed for smaller screens */
-        transform: none; /* Remove transforms for smaller screens */
-    }     
+        width: 60px; /* Adjust the width of individual images */
+        height: 60px; /* Adjust the height of individual images */
+    }  
 
     .content-carrousel img {
-        transform: none; /* Remove transforms for smaller screens */
+        width: 100%; /* Ensure the images take the full width of their containers */
+        height: 100%; /* Ensure the images take the full height of their containers */
     }
+
+    .content-carrousel img:hover {
+        transform: scale(1); /* Remove the hover scaling effect on smaller screens */
+    } 
+
+    .entire-content {
+        width: 50%; /* Make sure the entire content container takes the full width */
+    }   
 
     #projects {
         width: 300px;

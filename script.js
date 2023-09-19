@@ -1,9 +1,49 @@
-            const mobileMenu = document.getElementById("mobile-menu");
-            const navBar = document.querySelector(".nav-bar ul");
+            // JavaScript to toggle the menu
+            const menuToggle = document.getElementById("menu-toggle");
+            const navBar = document.getElementById("nav-bar");
 
-            mobileMenu.addEventListener("click", () => {
+            menuToggle.addEventListener("click", () => {
                 navBar.classList.toggle("open");
+                const navLinks = document.querySelector(".nav-bar.open ul");
+                if (navLinks.style.display === "flex") {
+                    navLinks.style.display = "none";
+                } else {
+                    navLinks.style.display = "flex";
+                }
+            });
+
+            // Close the menu when a link is clicked
+            const navLinks = document.querySelectorAll(".nav-bar a");
+
+            navLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    if (window.innerWidth <= 390) {
+                        navBar.classList.remove("open");
+                        const navLinks = document.querySelector(".nav-bar.open ul");
+                        navLinks.style.display = "none";
+                    }
+                });
+            });
+
+            // Toggle the menu when the window is resized
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 390) {
+                    navBar.classList.remove("open");
+                    const navLinks = document.querySelector(".nav-bar.open ul");
+                    navLinks.style.display = "flex";
+                }
             }); 
+
+            // Open the menu initially on page load if the viewport width is less than or equal to 390px
+            window.addEventListener("load", () => {
+                if (window.innerWidth <= 390) {
+                    navBar.classList.add("open");
+                    const navLinks = document.querySelector(".nav-bar.open ul");
+                    navLinks.style.display = "flex";
+                }
+            });
+
+
         
             //Home page buttons functionality 
 
@@ -18,7 +58,7 @@
     
             downloadCVButton.addEventListener('click', function () {
                 window.location.href = 'https://monushiaz.netlify.app/Monushia%20Zimri%20Resume%202023%20(2).pdf';  
-            });                      
+            });                       
 
      
                         

@@ -7,7 +7,7 @@
 body {
     overflow-x: hidden;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
+} 
 
 main {
     max-width: 1000px;
@@ -50,14 +50,65 @@ main {
 }
 
 .nav-bar li a {
-    padding: 10px 16px;
+    font-size: 20px;
+    padding: 10px 35px;
     text-decoration: none;
-    color: white;
+    color: whitesmoke;  
     height: 50px;
 }
 
 .nav-bar li a:hover {
     background-color: rgb(122, 218, 122);
+}
+
+/* Hamburger menu styling */
+.ham-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Mobile menu styling */
+.open {
+    display: block;
+}
+
+.nav-bar.open {
+    background-color: rgba(2, 153, 2, 0.8);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-bar.open ul {
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(2, 153, 2, 0.8);
+    padding-top: 50px; /* To account for the height of the fixed navigation bar */
+}
+
+.nav-bar.open li {
+    margin: 20px 0;
+}
+
+.nav-bar.open a {
+    font-size: 22px;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    width: 100%;
 }
 
 /* Social links styling */
@@ -205,7 +256,6 @@ main {
 #about {
     width: 900px;
     margin: 0 auto; 
-    height: auto;
     padding: 20px; 
 }
 
@@ -225,7 +275,7 @@ main {
     padding: 20px;
     margin: 10px;
     text-align: justify;
-}
+} 
 
 .about-text h2 {
     text-align: center;
@@ -241,31 +291,32 @@ main {
 /* Skills-Page */
 
 #slideshow {
-    margin: 0 auto;
-    padding-top: 20px; /* Adjust spacing */
-    width: 850px;
+    margin: -120px auto;
+    margin-bottom: 2px;
+    padding-top: 180px;
+    height: 500px;
+    width: 100%;
     box-sizing: border-box;
-    overflow: auto; /* Add horizontal scrolling for small screens */
 } 
 
-.slideshow-title {
+.slideshow title {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 24px; /* Adjust font size */
+    font-size: 60px;
     color: red;
     margin: 0 auto;
     text-align: center;
-    margin-top: 10px; /* Adjust spacing */
+    margin-top: 30%;
     letter-spacing: 3px;
-    font-weight: 300;
-}
+    font-weight: 300;  
+} 
 
 .entire-content {
     margin: auto;
-    margin-top: -20px; /* Adjust spacing */
-    width: 100%;
+    margin-top: -40px;
+    width: 150px; 
     perspective: 1000px;
     position: relative;
-    padding-top: 20px; /* Adjust spacing */
+    padding-top: 40px; 
 }
 
 .content-carrousel {
@@ -274,6 +325,7 @@ main {
     float: right;
     animation: rotor 15s infinite linear;
     transform-style: preserve-3d;
+
 }
 
 .content-carrousel:hover {
@@ -282,22 +334,30 @@ main {
 }
 
 .content-carrousel figure {
-    width: 100%;
+    width: 100%; 
     height: 150px;
     border: 1px solid #3b444b;
     overflow: hidden;
     position: absolute;
-}
+} 
 
 .content-carrousel figure:nth-child(1) {
     transform: rotateY(0deg) translateZ(300px);
-}
-
-.content-carrousel figure:nth-child(2) {
+} .content-carrousel figure:nth-child(2) {
     transform: rotateY(45deg) translateZ(300px);
-}
-
-/* Add similar styles for other figure elements here */
+} .content-carrousel figure:nth-child(3) {
+    transform: rotateY(90deg) translateZ(300px);
+} .content-carrousel figure:nth-child(4) {
+    transform: rotateY(135deg) translateZ(300px);
+} .content-carrousel figure:nth-child(5) {
+    transform: rotateY(180deg) translateZ(300px);
+} .content-carrousel figure:nth-child(6) {
+    transform: rotateY(225deg) translateZ(300px);
+} .content-carrousel figure:nth-child(7) {
+    transform: rotateY(270deg) translateZ(300px);
+}  .content-carrousel figure:nth-child(8) {
+    transform: rotateY(315deg) translateZ(300px);
+}  
 
 .shadow {
     position: absolute;
@@ -320,24 +380,26 @@ main {
 @keyframes rotor {
     from {
         transform: rotateY(0deg);
-    }
-    to {
+    } to {
         transform: rotateY(360deg);
-    }
-}
-/* Projects-Page */
+    } 
+} 
 
+/* Projects-Page */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} 
+}
 
 #projects {
-    width: 900px;
+    width: 850px; /* Occupy full width of the viewport */
     margin: 0 auto;
     padding: 20px;
-} 
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
 h2 {
     text-align: center;
@@ -346,14 +408,14 @@ h2 {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
+    justify-content: center; /* Center content horizontally */
+    padding: 20px 10px; /* Adjust padding for smaller screens */
     height: auto;
 }
 
 .container .box {
     position: relative;
-    width: calc(33.33% - 20px);
+    width: 100%; /* Occupy full width on smaller screens */
     margin: 20px 0;
     transition: 0.5s;
     display: flex;
@@ -376,7 +438,7 @@ h2 {
 .container .box:hover::before {
     transform: skewX(0deg);
     left: 20px;
-    width: 240px;
+    width: 100%; /* Adjust the width on smaller screens */
 }
 
 .container .box:nth-child(1)::before,
@@ -409,10 +471,10 @@ h2 {
 }
 
 .container .box:hover span::before {
-    top: -50px;
-    left: 50px;
-    width: 100px;
-    height: 100px;
+    top: -20px; /* Adjust the position on smaller screens */
+    left: 10px; /* Adjust the position on smaller screens */
+    width: 50px; /* Adjust the width on smaller screens */
+    height: 50px; /* Adjust the height on smaller screens */
     opacity: 1;
 }
 
@@ -427,7 +489,7 @@ h2 {
     z-index: 1;
     transition: 0.5s;
     color: black;
-    height: auto; /* Change height to auto */
+    height: auto;
 }
 
 .container .box .content h2 {
@@ -460,7 +522,6 @@ h2 {
 }
 
 /* Contact-Page */ 
-
 * {
     padding: 0;
     margin: 0;
@@ -468,10 +529,10 @@ h2 {
 }
 
 #contact {
-    width: 900px;
+    width: 900px; /* Occupy full width of the viewport */
     margin: 0 auto;
     padding: 20px;
-}    
+}  
 
 .icon {
     width: 20px;
@@ -488,17 +549,19 @@ h2 {
     align-items: center;
     margin-bottom: 20px;
     border-radius: 5px;
-}  
+}
 
 .container5 {
+    margin-bottom: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
 
 .container5 h2 {
     text-align: center;
-}  
+}
 
 .information {
     display: flex; /* Use flexbox for small screens */
@@ -506,15 +569,15 @@ h2 {
 }
 
 .form {
-    padding: 30px;
-} 
+    padding: 10px; /* Adjust padding for smaller screens */
+}
 
 .form form {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-} 
+}
 
 .form input,
 .form textarea {
@@ -543,98 +606,144 @@ h2 {
 .form button:hover {
     background-color: lightgreen;
 }
-  
 
-@media (max-width: 600px) {
 
-    .nav-bar ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-bar li {
-        margin: 5px 0;
-    }
-
+@media (max-width: 390px) {
     .nav-bar li a {
-        height: auto;
-    } 
-    
-    .links {
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        bottom: auto;
-        top: 20px;
-        right: 20px;
+        font-size: 16px;
+        padding: 10px 15px;
     }
-    
-    .background-image {
-        height: auto;
-        min-height: 100vh;
-    }  
+
+    .nav-bar.open ul {
+        top: 50px;
+    }
+
+    .links a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .profile-pic img {
+        width: 150px;
+        margin-top: 60%;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .buttons {
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #about {
+        width: 100%; /* Adjust the width to occupy the full width of the viewport */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
 
     .container {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center content horizontally */
-        padding: 10px; /* Adjust spacing */
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center; /* Center content horizontally on smaller screens */
+        margin: 10px; /* Reduce margin for smaller screens */
     }
 
     .about-text {
-        flex: none;
-        width: 100%;
-        text-align: center; /* Center text */
+        flex: 1;
+        padding: 10px; /* Reduce padding for smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .about-text h2 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .about-text p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    /* Adjust the styles for the slideshow section on smaller screens */
+    #slideshow {
+        margin: 10px auto;
+        margin-bottom: 2px;
+        padding-top: 20px;
+        height: auto; /* Adjust the height as needed for smaller screens */
+    }
+
+    .slideshow title {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        margin-top: 20%; /* Adjust margin-top for smaller screens */
+    }
+
+    .entire-content {
+        width: 100%; /* Adjust width to occupy the full width of the viewport */
+        padding-top: 20px; /* Adjust padding for smaller screens */
     }
 
     .content-carrousel {
-        width: 100%;
-        position: relative; /* Reset the position */
-        animation: none; /* Remove animation */
+        animation: none; /* Disable the animation on smaller screens */
+        transform-style: flat; /* Use flat transform style for compatibility */
     }
 
     .content-carrousel figure {
-        width: 50%; /* Adjust figure width */
-        transform: rotateY(0deg) translateZ(0px); /* Reset transform */
-        margin: 10px auto; /* Adjust spacing */
+        width: 100%;
+        height: auto; /* Adjust height as needed for smaller screens */
+        transform: none; /* Remove transforms for smaller screens */
     }
 
-    .slideshow-title {
-        font-size: 20px; /* Adjust font size */
-        margin-top: 10px; /* Adjust spacing */
-    } 
+    .content-carrousel img {
+        transform: none; /* Remove transforms for smaller screens */
+    }
+
+    #projects {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
 
     .container .box {
-        width: 100%; /* Full width for small screens */
-        margin: 20px 0;
+        width: 100%; /* Occupy full width on smaller screens */
     }
 
     .container .box::before {
-        left: 0; /* Adjust skew position */
-        width: 100%; /* Full width for small screens */
-        transform: skewX(0deg); /* Remove skew */
+        left: 10px; /* Adjust the left position on smaller screens */
+        width: 100%; /* Adjust the width on smaller screens */
     }
 
-    .container .box .content {
-        height: auto; /* Reset height to auto */
-        padding: 10px; /* Adjust padding */
+    .container .box:hover::before {
+        transform: skewX(0deg);
     }
 
-    .container .box .content h2 {
-        font-size: 18px; /* Adjust font size */
-    } 
+    .container .box span::before {
+        top: -10px; /* Adjust the top position on smaller screens */
+        left: 5px; /* Adjust the left position on smaller screens */
+        width: 30px; /* Adjust the width on smaller screens */
+        height: 30px; /* Adjust the height on smaller screens */
+    }
 
-    .container5 {
+    #contact {
         padding: 10px; /* Adjust padding for smaller screens */
-        margin: 10px auto; /* Adjust margin */
+    }
+
+    .input-group {
+        flex-direction: column; /* Stack input elements vertically on smaller screens */
+    }
+
+    .icon {
+        transform: none; /* Reset the icon position */
+        margin-bottom: 5px; /* Add some space between the icon and input */
     }
 
     .form input,
     .form textarea {
-        margin: 5px 0; /* Further reduce margin */
+        margin: 5px 0; /* Adjust margin for smaller spacing */
     }
-}         
 
-
+}
+  
 
 
 

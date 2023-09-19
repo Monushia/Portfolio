@@ -644,7 +644,7 @@ h2 {
         color: white;
         text-align: center;
         width: 100%;
-    }   
+    }    
 
     .links a {
         width: 15px;
@@ -668,7 +668,7 @@ h2 {
         margin: 0 auto;
         margin-top: 50px; 
         margin-left: 10%;  
-    }   
+    }    
 
     .buttons {
         margin-right: 100px;
@@ -768,12 +768,8 @@ h2 {
     
     .container .box .content p {
         font-size: 10px;
-    }  
+    }   
 
-    .content h2 {
-        font-size: 10px;  
-    }     
- 
     #contact {
         width: 300px;
         padding: 5px; /* Adjust padding for smaller screens */
@@ -799,7 +795,7 @@ h2 {
     .g-recaptcha {
         transform: scale(0.8);
     }    
-}  
+}   
   
 
 

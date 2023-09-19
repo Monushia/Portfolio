@@ -20,67 +20,82 @@
             window.location.href = 'https://monushiaz.netlify.app/Monushia%20Zimri%20Resume%202023%20(2).pdf';  
         });                      
 
-
-    //Contact-validation  
+     
+        
+                        
+                // Contact-validation
 
         const contactForm = document.getElementById("contact-form");
-        const nameInput = document.getElementById("name"); 
+        const nameInput = document.getElementById("name");
         const subjectInput = document.getElementById("subject");
-        const emailInput = document.getElementById("email"); 
-        const messageInput = document.getElementById("message"); 
-        const sendButton = document.getElementById("send-btn"); 
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
+        const sendButton = document.getElementById("send-btn");
 
-        contactForm.addEventListener('submit', function (event) {  
-            event.preventDefault(); 
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
 
-            const nameValue = nameInput.value.trim(); 
-            const subjectValue = subjectInput.value.trim(); 
+            const nameValue = nameInput.value.trim();
+            const subjectValue = subjectInput.value.trim();
             const emailValue = emailInput.value.trim();
-            const messageValue = messageInput.value.trim();  
+            const messageValue = messageInput.value.trim();
+            const recaptchaResponse = grecaptcha.getResponse(); // Get reCAPTCHA response
 
-            if (nameValue === '') {
-                alert('Please enter your name. '); 
-                nameInput.focus(); 
-                return; 
-            };  
+            if (nameValue === '' || subjectValue === '' || emailValue === '' || messageValue === '') {
+                alert('Please fill out all fields.');
+                return;
+            }
 
-            if (subjectValue === '') {
-                alert('Please enter a subject. ');
-                subjectInput.focus(); 
-                return; 
-            };  
+            if (!isValidEmail(emailValue)) {
+                alert('Please enter a valid email address.');
+                emailInput.focus();
+                return;
+            }
 
-            if (emailValue === '') {
-                alert('Please enter your email. '); 
-                emailInput.focus();  
-                return; 
+            if (!recaptchaResponse) {
+                alert('Please complete the reCAPTCHA before submitting the form.');
+                return;
+            }
 
-            } else if (!isValidEmail(emailValue)) {
-                alert('Please enter valid email address. ');
-                emailInput.focus(); 
-                return; 
-
-            }; 
-
-            if (messageValue === '') {
-                alert('Please enter the message. ');
-                messageInput.focus(); 
-                return; 
-            };
-
-            //If all validations pass the form will submit 
-
-            alert ('Email submitted successfully! '); 
-            contactForm.reset(); 
-
-        });    
-
+            // If all validations pass including reCAPTCHA, the form will submit
+            alert('Email submitted successfully!');
+            contactForm.reset();
+        });
 
         function isValidEmail(email) {
-            //Basic email validation using regular expression
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
-            return emailPattern.test(email); 
-        };   
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+
+
+
+            // Recaptcha validation
+
+                   
+  
+function enableSubmitButton() {
+    document.getElementById('submit').disabled = false;
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const recaptchaResponse = grecaptcha.getResponse();
+
+    if (!recaptchaResponse) {
+      alert('Please complete the reCAPTCHA before submitting the form.');
+    } else {
+      // reCAPTCHA is completed, you can send the email here
+      sendMail();
+    }
+  }
+
+  document.getElementById('form').addEventListener('submit', handleSubmit);
+
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6Le9FCUoAAAAAM1AZpsXGU1OIC3c_CM7eZd5iquE', { action: 'submit' }).then(enableSubmitButton);
+  });
+        
 
         //Emailjs-validation  
 
@@ -93,7 +108,7 @@
 
             const serviceID = "service_v5ku1me"; 
             const templateID = "template_4by0cjg";  
-    
+
             emailjs
             .send(serviceID, templateID, params)
             .then((res) => {
@@ -107,47 +122,7 @@
                 console.error(err); 
                 alert("An error occurred while sending the email. Please try again"); 
             });  
-         };    
-         
-        
-
-            // Recaptcha validation
-
-            function enableSubmitButton() {
-                document.getElementById('send-btn').disabled = false;
-            }
-            
-            function handleSubmit(event) {
-                event.preventDefault();
-            
-                const recaptchaResponse = grecaptcha.getResponse();
-            
-                if (!recaptchaResponse) {
-                alert('Please complete the reCAPTCHA before submitting the form.');
-                } else {
-                // If the reCAPTCHA is completed, you can call your sendMail function here.
-                sendMail();
-                }
-            }
-            
-            // Add an event listener to the form element
-            document.getElementById('contact-form').addEventListener('submit', handleSubmit);
-            
-            // Ensure the submit button is initially disabled
-            document.getElementById('send-btn').disabled = true;
-            
-            grecaptcha.ready(function() {
-                grecaptcha
-                .execute('6LeYASUoAAAAAFFy--WOctrbNa0dEi97OB3y8xKw', { action: 'submit' })
-                .then(enableSubmitButton);
-            });   
-  
-
-  
-
-
-   
-
+        };  
 
 
 

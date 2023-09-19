@@ -609,48 +609,57 @@ h2 {
 
 
 @media (max-width: 390px) {
+
     .nav-bar li a {
         font-size: 16px;
         padding: 10px 15px;
-    }
+    } 
 
     .nav-bar.open ul {
         top: 50px;
-    }
+    } 
 
     .links a {
         width: 30px;
         height: 30px;
-    }
+    } 
 
     .profile-pic img {
-        width: 150px;
-        margin-top: 60%;
+        width: 130px; 
+        margin-top: 40%;
+        margin-left: 60%; 
+    } 
+
+    .background-image {
+        height: 50vh;
+        background-image: contain;
     }
 
     .title {
-        font-size: 12px;
+        font-size: 6px;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .buttons {
         margin-right: 10px;
-    }
+    } 
 
     button {
         padding: 8px 15px;
-        font-size: 14px;
-    }
+        font-size: 14px; 
+    } 
 
     #about {
         width: 100%; /* Adjust the width to occupy the full width of the viewport */
         padding: 10px; /* Reduce padding for smaller screens */
-    }
+    } 
 
     .container {
         flex-direction: column; /* Stack content vertically on smaller screens */
         align-items: center; /* Center content horizontally on smaller screens */
-        margin: 10px; /* Reduce margin for smaller screens */
-    }
+        margin: 10px; /* Reduce margin for smaller screens */ 
+    } 
 
     .about-text {
         flex: 1;
@@ -661,24 +670,23 @@ h2 {
     .about-text h2 {
         font-size: 20px; /* Adjust font size for smaller screens */
         margin-bottom: 10px;
-    }
+    } 
 
     .about-text p {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
 
-    /* Adjust the styles for the slideshow section on smaller screens */
     #slideshow {
         margin: 10px auto;
         margin-bottom: 2px;
         padding-top: 20px;
-        height: auto; /* Adjust the height as needed for smaller screens */
+        height: 50vh; /* Adjust the height as needed for smaller screens */
     }
 
     .slideshow title {
         font-size: 40px; /* Adjust font size for smaller screens */
         margin-top: 20%; /* Adjust margin-top for smaller screens */
-    }
+    } 
 
     .entire-content {
         width: 100%; /* Adjust width to occupy the full width of the viewport */

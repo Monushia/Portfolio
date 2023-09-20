@@ -83,7 +83,7 @@
                 if (nameValue === '' || subjectValue === '' || emailValue === '' || messageValue === '') {
                     alert('Please fill out all fields.');
                     return;
-                }
+                } 
 
                 if (!isValidEmail(emailValue)) {
                     alert('Please enter a valid email address.');
@@ -131,7 +131,7 @@
 
             grecaptcha.ready(function() {
                 grecaptcha.execute('6Le9FCUoAAAAAM1AZpsXGU1OIC3c_CM7eZd5iquE', { action: 'submit' }).then(enableSubmitButton);
-            }); 
+            });  
                     
 
         //Emailjs-validation  
@@ -159,7 +159,7 @@
                 console.error(err); 
                 alert("An error occurred while sending the email. Please try again"); 
             });  
-        };   
+        };    
 
 
 

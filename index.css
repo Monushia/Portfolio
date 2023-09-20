@@ -60,7 +60,7 @@ main {
     background-color: rgba(2, 153, 2, 0.8);
     position: absolute;
     top: 25px; /* Adjust based on your navigation bar height */
-    left: 10px;
+    right: 10px;
     width: calc(20% - 10px);
     padding-top: 5px; /* To account for the height of the fixed navigation bar */
   }  
@@ -70,7 +70,7 @@ main {
 }
 
 .nav-bar li a {
-    font-size: 20px;
+    font-size: 12px;
     padding: 10px 35px;
     text-decoration: none;
     color: whitesmoke;  
@@ -143,7 +143,7 @@ main {
     height: 60px;
     border-radius: 50%;
     overflow: hidden;
-}
+} 
 
 .links a i img {
     width: 100%;
@@ -158,8 +158,8 @@ main {
 .links a:hover {
     background-color: rgb(2, 153, 2);
     border: 10px solid rgb(2, 153, 2);
-    opacity: 0.9;
-} 
+    opacity: 0.9; 
+}  
 
 /* Body styling */
 
@@ -195,7 +195,7 @@ main {
     margin-left: -50%;
     padding: 2%;
     border-radius: 100px;
-} 
+}  
 
 .title {
     font-weight: bolder;
@@ -627,8 +627,6 @@ main {
       .nav-bar.open {
         display: block;
       } 
-    
-      /* When the menu is open, display the navigation links */
 
       .links {
         right: 5px; /* Adjust positioning for smaller screens */
@@ -677,20 +675,13 @@ main {
     
         /* Adjust the width of the #about section to fit smaller screens */
     #about {
-        width: 100%; /* Occupies the full width of the viewport */
-    } 
-
-    /* Center the content vertically and horizontally on smaller screens */
-    .container {
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        align-items: center; /* Center content horizontally on smaller screens */
-        margin: 10px; /* Reduce margin for smaller screens */
+        width: 330px; /* Occupies the full width of the viewport */
     } 
 
     /* Reduce padding and adjust font size for smaller screens */
     .about-text {
         flex: 1;
-        padding: 8px; /* Reduce padding for smaller screens */
+        padding: 8px 0; /* Reduce padding for smaller screens */
         text-align: center; /* Center text on smaller screens */
     }
 
@@ -702,9 +693,15 @@ main {
     .about-text p {
         font-size: 10px; /* Adjust font size for smaller screens */
         text-align: justify;
-    }
+    } 
 
-    /* Make the slideshow responsive */
+    /* Center the content vertically and horizontally on smaller screens */
+    .container {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center; /* Center content horizontally on smaller screens */
+        margin: 10px 0; /* Reduce margin for smaller screens */
+    }  
+
     #slideshow {
         margin: 5px auto;
         padding-top: 10px; /* Adjust the top padding for smaller screens */
@@ -713,16 +710,15 @@ main {
         overflow-x: scroll; /* Add horizontal scrolling for smaller screens if needed */
     }     
 
-    /* Adjust the width and height of individual images in the slideshow */
     .content-carrousel figure {
         width: 40px; /* Adjust the width of individual images */
         height: 40px; /* Adjust the height of individual images */
-    } 
+    }  
 
     .content-carrousel img {
         width: 100%; /* Ensure the images take the full width of their containers */
         height: 100%; /* Ensure the images take the full height of their containers */
-    }
+    } 
 
     .content-carrousel img:hover {
         transform: scale(1); /* Remove the hover scaling effect on smaller screens */
@@ -732,7 +728,7 @@ main {
     
     .entire-content {
         width: 100%;
-    }  
+    }   
 
     .section h2 {
         font-size: 18px;
@@ -754,7 +750,7 @@ main {
         flex-wrap: wrap; /* Allow content to wrap on smaller screens */
         justify-content: center; /* Center content horizontally */
         gap: 20px; /* Add spacing between .box divs */
-    } 
+    }   
 
     .container .box {
         width: 200px; /* Occupy full width on smaller screens */
@@ -763,11 +759,11 @@ main {
     .container .box::before {
         left: 2px; /* Adjust the left position on smaller screens */
         width: 120px; /* Adjust the width on smaller screens */
-    }           
+    }            
 
     .container .box:hover::before {
         transform: skewX(0deg);
-    }   
+    }    
 
     .container .box span::before {
         top: -10px; /* Adjust the top position on smaller screens */
@@ -790,9 +786,13 @@ main {
         padding: 5px; /* Adjust padding for smaller screens */
     }   
 
+    .container5{
+        margin: 20px 0;
+    }
+
     .input-group {
         flex-direction: column; /* Stack input elements vertically on smaller screens */
-    } 
+    }  
 
     .icon {
         transform: none; /* Reset the icon position */

@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} 
+}  
 
 body {
     overflow-x: hidden;
@@ -27,7 +27,40 @@ main {
     text-align: center; 
 }
 
-/* Nav-bar styling */
+/* Hamburger menu styling */
+
+.menu-toggle {
+    display: none; /* Initially hide the hamburger menu icon */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 5px;
+    right: -5px;
+    z-index: 999;
+} 
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgba(2, 153, 2, 0.8);
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+} 
+
+/* Navigation bar styles for small screens */
 
 .nav-bar {
     background-color: rgb(2, 153, 2);
@@ -36,11 +69,11 @@ main {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Adjust the alignment */
     align-items: center;
     z-index: 2;
     height: 45px;
-}  
+}
 
 .nav-bar ul {
     padding: 0;
@@ -58,11 +91,11 @@ main {
     flex-direction: column;
     background-color: rgba(2, 153, 2, 0.8);
     position: absolute;
-    top: 25px; /* Adjust based on your navigation bar height */
-    right: 10px;
-    width: calc(20% - 10px);
+    top: 45px; /* Adjust based on your navigation bar height */
+    right: 0; /* Adjust the position */
+    width: 100%; /* Occupy full width */
     padding-top: 5px; /* To account for the height of the fixed navigation bar */
-  }  
+}
 
 .nav-bar li {
     list-style-type: none;
@@ -70,56 +103,14 @@ main {
 
 .nav-bar li a {
     font-size: 18px;
-    padding: 10px 45px;
+    padding: 10px 20px; /* Adjust the padding */
     text-decoration: none;
-    color: whitesmoke;  
-}  
+    color: whitesmoke;
+}    
 
 .nav-bar li a:hover {
     background-color: rgb(122, 218, 122);
-    height: 45px;
-}
-
-/* Hamburger menu styling */
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    position: fixed;
-    top: 5px;
-    right: -5px;
-    z-index: 999;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: rgba(2, 153, 2, 0.8);
-    margin: 5px 0;
-    transition: transform 0.3s ease-in-out;  
 } 
-
-.menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-} 
-
-
-
-.nav-bar {
-    transform: translateX(0);
-    transition: transform 0.3s ease-in-out;
-}  
-
 
 /* Social links styling */
 
@@ -634,7 +625,7 @@ main {
     .links a {
         width: 30px; /* Reduce the width of the links */
         height: 30px; /* Reduce the height of the links */
-    } 
+    }  
    
 
     .profile-pic img {
@@ -669,11 +660,12 @@ main {
         font-size: 8px; /* Adjust the font size as needed */
         width: 80px; /* Divide the container width by 2 */
         box-sizing: border-box; /* Ensure padding is included in the width */
-    }  
-    
-        /* Adjust the width of the #about section to fit smaller screens */
+    }   
+
+
     #about {
-        width: 330px; /* Occupies the full width of the viewport */
+        width: 350px; /* Occupies the full width of the viewport */
+        padding: 10px; /* Add some padding for spacing */
     } 
 
     /* Reduce padding and adjust font size for smaller screens */
@@ -689,59 +681,49 @@ main {
     }
 
     .about-text p {
-        font-size: 10px; /* Adjust font size for smaller screens */
+        font-size: 12px; /* Adjust font size for smaller screens */
         text-align: justify;
-    } 
+    }
 
-    /* Center the content vertically and horizontally on smaller screens */
     .container {
         flex-direction: column; /* Stack content vertically on smaller screens */
         align-items: center; /* Center content horizontally on smaller screens */
         margin: 10px 0; /* Reduce margin for smaller screens */
-    }  
+    } 
 
+    /* Adjust the slideshow for smaller screens */
     #slideshow {
         margin: 5px auto;
-        padding-top: 10px; /* Adjust the top padding for smaller screens */
+        padding: 0; /* Remove padding to reduce extra space */
+        height: auto; /* Let the height adjust automatically based on content */
         width: 100%; /* Ensure the slideshow takes up the full width */
-        max-width: 390px; /* Set a maximum width for the slideshow */
         overflow-x: scroll; /* Add horizontal scrolling for smaller screens if needed */
-    }     
+    }  
 
     .content-carrousel figure {
-        width: 40px; /* Adjust the width of individual images */
-        height: 40px; /* Adjust the height of individual images */
-    }  
+        width: 60px; /* Adjust the width of individual images */
+        height: 60px; /* Adjust the height of individual images */
+    } 
 
     .content-carrousel img {
         width: 100%; /* Ensure the images take the full width of their containers */
         height: 100%; /* Ensure the images take the full height of their containers */
-    } 
+    }
 
     .content-carrousel img:hover {
         transform: scale(1); /* Remove the hover scaling effect on smaller screens */
     }
 
     /* Ensure the entire content container takes the full width */
-    
     .entire-content {
         width: 100%;
-    }   
-
-    .section h2 {
-        font-size: 18px;
-    }  
-
-    .content h3 {
-        font-size: 12px;
-        padding-bottom: 10px; 
-    }  
-
+    }
+ 
 
     #projects {
-        width: 300px;
+        width: 330px;
         padding: 8px; /* Adjust padding for smaller screens */ 
-    } 
+    }  
     
     .container {
         display: flex; /* Use flexbox to center content */
@@ -780,7 +762,7 @@ main {
     }     
 
     #contact {
-        width: 300px;
+        width: 330px;  
         padding: 5px; /* Adjust padding for smaller screens */
     }   
 

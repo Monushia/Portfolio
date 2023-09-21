@@ -39,20 +39,19 @@ main {
     justify-content: center;
     align-items: center;
     z-index: 2;
-    height: 50px;
-}
+    height: 45px;
+}  
 
 .nav-bar ul {
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
-    align-items: center;
 } 
 
 .nav-bar ul li {
-    margin-bottom: 10px;
-} 
+    margin-bottom: 5px;
+}  
 
 .nav-bar.open ul {
     display: flex;
@@ -70,15 +69,15 @@ main {
 }
 
 .nav-bar li a {
-    font-size: 12px;
-    padding: 10px 35px;
+    font-size: 18px;
+    padding: 10px 45px;
     text-decoration: none;
     color: whitesmoke;  
-    height: 50px;
-}
+}  
 
 .nav-bar li a:hover {
     background-color: rgb(122, 218, 122);
+    height: 45px;
 }
 
 /* Hamburger menu styling */
@@ -89,8 +88,8 @@ main {
     cursor: pointer;
     padding: 10px;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 5px;
+    right: -5px;
     z-index: 999;
 }
 
@@ -102,7 +101,6 @@ main {
     transition: transform 0.3s ease-in-out;  
 } 
 
-/* Styles for the menu toggle when it's active (menu is open) */
 .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -115,7 +113,7 @@ main {
     transform: rotate(45deg) translate(-5px, -6px);
 } 
 
-/* Initial state: hide the menu */
+
 
 .nav-bar {
     transform: translateX(0);

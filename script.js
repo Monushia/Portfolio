@@ -41,8 +41,7 @@
                     const navLinks = document.querySelector(".nav-bar.open ul");
                     navLinks.style.display = "flex";
                 }
-            });
-
+            }); 
 
         
             //Home page buttons functionality 

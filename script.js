@@ -10,7 +10,7 @@
                 } else {
                     navLinks.style.display = "flex";
                 }
-            });
+            });  
 
             // Close the menu when a link is clicked
             const navLinks = document.querySelectorAll(".nav-bar a");
@@ -23,7 +23,7 @@
                         navLinks.style.display = "none";
                     }
                 });
-            });
+            }); 
 
             // Toggle the menu when the window is resized
             window.addEventListener("resize", () => {
